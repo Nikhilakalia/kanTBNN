@@ -5,7 +5,7 @@
 #SBATCH --mem=8G      
 #SBATCH --time=0:5:00
 #SBATCH --output=%N-%j.out
-#SBATCH --account=<your account>
+#SBATCH --account=def-fslien
 
 module load python/3.10  # Using Default Python version - Make sure to choose a version that suits your application
 source /scratch/rmcconke/training_env/bin/activate
