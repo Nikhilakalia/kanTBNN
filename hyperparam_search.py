@@ -20,7 +20,7 @@ with open('param_list.json') as param_list_file:
 parser = argparse.ArgumentParser()
 parser.add_argument('cluster_number')
 
-dataset_params = {'file': '/home/ryley/WDK/ML/dataset/komegasst_split.csv',
+dataset_params = {'file': 'komegasst_split.csv',
                   'test_set': ['case_1p2','fp_3630'],
                   'final_val_set': ['case_1p0','fp_2000','fp_3970'],
                   'cv_val_sets': {0: ['case_0p5','fp_2540','fp_1000'],
@@ -39,11 +39,12 @@ if cluster != 'all':
 else:
     cluster = args.cluster_number
 
+print(f'CLUSTER: {cluster}')
 
 df_test = df[df['Case'].isin(dataset_params['test_set'])]
 df_final_val = df[df['Case'].isin(dataset_params['final_val_set'])]
 df_tv = df[~df['Case'].isin(dataset_params['test_set']+dataset_params['final_val_set'])]
-print(f'Dataset: {len(df)}, test: {len(df_test)}, final_val: {len(df_final_val)}, tv: {len(df_tv)}')
+print(f'Dataset total: {len(df)}, test: {len(df_test)}, final_val: {len(df_final_val)}, tv: {len(df_tv)}')
 
 training_params = {'early_stopping_patience': 20,
                 'max_epochs': 20,
