@@ -1,0 +1,7002 @@
+[
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 8,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 3,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 64
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.01,
+        "batch_size": 128
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 4,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.001,
+        "batch_size": 128
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 5,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 9,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.0001,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.95,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 6,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 128
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.0001,
+        "batch_size": 64
+    },
+    {
+        "neurons": 50,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 1e-05,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 20,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 30,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 2,
+        "learning_rate_decay": 0.99,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 9,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 256
+    },
+    {
+        "neurons": 40,
+        "n_hidden": 8,
+        "learning_rate_decay": 1,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 80,
+        "n_hidden": 4,
+        "learning_rate_decay": 1,
+        "learning_rate": 0.001,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 6,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 1e-05,
+        "batch_size": 1024
+    },
+    {
+        "neurons": 60,
+        "n_hidden": 7,
+        "learning_rate_decay": 0.9,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 5,
+        "learning_rate_decay": 0.98,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 70,
+        "n_hidden": 10,
+        "learning_rate_decay": 0.8,
+        "learning_rate": 0.01,
+        "batch_size": 512
+    },
+    {
+        "neurons": 10,
+        "n_hidden": 3,
+        "learning_rate_decay": 0.999,
+        "learning_rate": 0.0001,
+        "batch_size": 256
+    }
+]
