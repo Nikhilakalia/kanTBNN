@@ -1,6 +1,7 @@
 import pandas as pd
 import torch
 torch.manual_seed(0)
+torch.set_num_threads(14)
 import random
 random.seed(0)
 import numpy as np
