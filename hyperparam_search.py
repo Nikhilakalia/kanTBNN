@@ -53,7 +53,7 @@ df_tv = df[~df['Case'].isin(dataset_params['test_set']+dataset_params['final_val
 print(f'Dataset total: {len(df)}, test: {len(df_test)}, final_val: {len(df_final_val)}, tv: {len(df_tv)}')
 
 training_params = {'early_stopping_patience': 20,
-                'max_epochs': 1500,
+                'max_epochs': 10,
                 'learning_rate': 0.001,
                 'learning_rate_decay': 0.98,
                 'batch_size': 128,
