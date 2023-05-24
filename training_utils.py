@@ -1,6 +1,11 @@
 import pandas as pd
 import torch
 import numpy as np
+torch.manual_seed(0)
+import random
+random.seed(0)
+import numpy as np
+np.random.seed(0)
 from torch.utils.data import Dataset, DataLoader
 import torch.nn as nn
 import torch.optim as optim
@@ -31,6 +36,7 @@ class EarlyStopper:
 
 def bLoss(outputs, labels, alpha = 1000):
     #specifying the batch size
+    outputs = torch.nan_to_num(outputs)
     batch_size = outputs.size()[0]
     se = ((outputs[:,0,0] - labels[:,0,0])**2 \
            + (outputs[:,0,1] - labels[:,0,1])**2 \

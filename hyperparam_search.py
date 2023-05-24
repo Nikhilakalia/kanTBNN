@@ -1,4 +1,10 @@
 import pandas as pd
+import torch
+torch.manual_seed(0)
+import random
+random.seed(0)
+import numpy as np
+np.random.seed(0)
 import torch.nn as nn
 from training_utils import early_stopped_tbnn_training_run
 import json
