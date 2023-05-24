@@ -103,5 +103,72 @@ EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %
 Training points: 2604, validation points 1154
 EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
 =============================================================================================
+  1   1.000e-04   0.00740   0.00898   0.00740 / 0.00898   0.00000 / 0.00000   0.27% / 0.00%
+ 10   6.302e-05   0.00736   0.00895   0.00736 / 0.00895   0.00000 / 0.00000   0.27% / 0.00%
 
-Intel MKL ERROR: Parameter 3 was incorrect on entry to SGEBAL.
+=====| CV SET: 1
+
+Training points: 2500, validation points 1258
+EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
+=============================================================================================
+  1   1.000e-04   0.00747   0.00733   0.00747 / 0.00733   0.00000 / 0.00000   0.08% / 0.00%
+ 10   6.302e-05   0.00744   0.00730   0.00744 / 0.00730   0.00001 / 0.00000   0.08% / 0.00%
+
+=====| CV SET: 2
+
+Training points: 2412, validation points 1346
+EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
+=============================================================================================
+  1   1.000e-04   0.00808   0.00673   0.00808 / 0.00673   0.00000 / 0.00000   0.00% / 0.00%
+ 10   6.302e-05   0.00806   0.00671   0.00806 / 0.00671   0.00000 / 0.00000   0.00% / 0.00%
+
+=============> NEW BEST CV SCORE FOUND: 0.007653509266674519 <==============
+PARAMS:
+{'early_stopping_patience': 20, 'max_epochs': 10, 'learning_rate': 0.0001, 'learning_rate_decay': 0.95, 'batch_size': 1024, 'val_set': ['case_1p5', 'fp_1410', 'fp_3030']}
+{'neurons': 20, 'n_hidden': 5, 'activation_function': SiLU(), 'input_features': ['komegasst_q6', 'komegasst_q5', 'komegasst_I1_1', 'komegasst_I1_3', 'komegasst_I2_3', 'komegasst_I1_5']}
+
+====================================================
+                SEARCH ITERATION: 4 
+====================================================
+
+
+=====| CV SET: 0
+
+Training points: 2604, validation points 1154
+EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
+=============================================================================================
+  1   1.000e-02   0.00768   0.00928   0.00768 / 0.00928   0.00000 / 0.00000   0.00% / 0.00%
+ 10   1.342e-03   0.00728   0.00881   0.00726 / 0.00881   0.00003 / 0.00000   3.69% / 0.00%
+
+=====| CV SET: 1
+
+Training points: 2500, validation points 1258
+EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
+=============================================================================================
+  1   1.000e-02   0.00741   0.00729   0.00741 / 0.00729   0.00000 / 0.00000   0.00% / 0.00%
+ 10   1.342e-03   0.00377   0.00375   0.00377 / 0.00374   0.00001 / 0.00001   5.72% / 4.77%
+
+=====| CV SET: 2
+
+Training points: 2412, validation points 1346
+EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
+=============================================================================================
+  1   1.000e-02   0.00842   0.00711   0.00842 / 0.00711   0.00000 / 0.00000   0.00% / 0.00%
+ 10   1.342e-03   0.00684   0.00667   0.00682 / 0.00565   0.00002 / 0.00102   0.91% / 14.12%
+
+=============> NEW BEST CV SCORE FOUND: 0.006409891492997606 <==============
+PARAMS:
+{'early_stopping_patience': 20, 'max_epochs': 10, 'learning_rate': 0.01, 'learning_rate_decay': 0.8, 'batch_size': 128, 'val_set': ['case_1p5', 'fp_1410', 'fp_3030']}
+{'neurons': 70, 'n_hidden': 9, 'activation_function': SiLU(), 'input_features': ['komegasst_q6', 'komegasst_q5', 'komegasst_I1_1', 'komegasst_I1_3', 'komegasst_I2_3', 'komegasst_I1_5']}
+
+====================================================
+                SEARCH ITERATION: 5 
+====================================================
+
+
+=====| CV SET: 0
+
+Training points: 2604, validation points 1154
+EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v
+=============================================================================================
+NaNs: 4732416
