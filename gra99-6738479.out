@@ -1,0 +1,5 @@
+starting training...
+Traceback (most recent call last):
+  File "/project/6006014/rmcconke/ML/scripts/tbnn/hyperparam_search.py", line 2, in <module>
+    import torch.nn as nn
+ModuleNotFoundError: No module named 'torch'

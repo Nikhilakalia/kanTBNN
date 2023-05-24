@@ -13,4 +13,4 @@ module load scipy-stack
 
 echo "starting training..."
 
-python3 hyperparam_search.py $1 > hyperparam_search_$1.log
+python3 -u hyperparam_search.py $1 > hyperparam_search_$1.log
