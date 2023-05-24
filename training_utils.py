@@ -39,7 +39,7 @@ def bLoss(outputs, labels, alpha = 1000):
     if torch.nonzero(torch.isnan(outputs)).sum().item() != 0: print(f'NaNs: {torch.nonzero(torch.isnan(outputs)).sum().item()}')
     if torch.nonzero(torch.isinf(outputs)).sum().item() != 0: print(f'infs: {torch.nonzero(torch.isinf(outputs)).sum().item()}')
 
-    #outputs = torch.nan_to_num(outputs)
+    outputs = torch.nan_to_num(outputs)
     batch_size = outputs.size()[0]
     se = ((outputs[:,0,0] - labels[:,0,0])**2 \
            + (outputs[:,0,1] - labels[:,0,1])**2 \
@@ -76,6 +76,7 @@ def mseLoss(outputs, labels):
 
 def realizLoss(outputs, labels, alpha = 1000):
     #specifying the batch size
+    outputs = torch.nan_to_num(outputs)
     batch_size = outputs.size()[0]
     eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
     zero = torch.zeros_like(outputs)
@@ -163,6 +164,7 @@ class bDataset(Dataset):
         return features, Tn, target
     
 def count_nonrealizable(b):
+    outputs = torch.nan_to_num(outputs)
     eigs = torch.sort(torch.real(torch.linalg.eigvals(b)),descending=True)[0]
     zero = torch.zeros_like(b)
     zero_eig = torch.zeros_like(eigs[:,0])
