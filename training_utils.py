@@ -207,7 +207,7 @@ def early_stopped_tbnn_training_run(model_params, training_params, df_tv):
 
     optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'])
     lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=training_params['learning_rate_decay'])
-    early_stopper = EarlyStopper(patience=training_params['early_stopping_patience'], min_delta=0)
+    early_stopper = EarlyStopper(patience=training_params['early_stopping_patience'], min_delta=1E-7)
 
     print('EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v')
     print('=============================================================================================')

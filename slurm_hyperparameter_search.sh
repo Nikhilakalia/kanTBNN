@@ -3,7 +3,7 @@
 #SBATCH --tasks-per-node=1 
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=12G      
-#SBATCH --time=0:15:00
+#SBATCH --time=11:59:00
 #SBATCH --output=search_slurm_%j.out
 #SBATCH --account=def-fslien
 
