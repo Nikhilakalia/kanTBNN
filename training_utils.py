@@ -164,7 +164,7 @@ class bDataset(Dataset):
         return features, Tn, target
     
 def count_nonrealizable(b):
-    outputs = torch.nan_to_num(outputs)
+    b = torch.nan_to_num(b)
     eigs = torch.sort(torch.real(torch.linalg.eigvals(b)),descending=True)[0]
     zero = torch.zeros_like(b)
     zero_eig = torch.zeros_like(eigs[:,0])
