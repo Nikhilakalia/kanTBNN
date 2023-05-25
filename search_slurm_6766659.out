@@ -1,0 +1,9 @@
+starting training...
+Traceback (most recent call last):
+  File "/project/6006014/rmcconke/ML/scripts/tbnn/hyperparam_search.py", line 86, in <module>
+    model, loss_values[i], val_loss_values[i] = early_stopped_tbnn_training_run(model_params,training_params,df_tv)
+  File "/project/6006014/rmcconke/ML/scripts/tbnn/training_utils.py", line 217, in early_stopped_tbnn_training_run
+    loss = loss_fn(y_pred, y_batch)
+  File "/project/6006014/rmcconke/ML/scripts/tbnn/training_utils.py", line 51, in bLoss
+    eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
+RuntimeError: torch.linalg.eig: input tensor should not contain infs or NaNs.
