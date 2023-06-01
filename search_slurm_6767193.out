@@ -1,9 +1,0 @@
-starting training...
-Traceback (most recent call last):
-  File "/project/6006014/rmcconke/ML/scripts/tbnn/hyperparam_search.py", line 86, in <module>
-    model, loss_values[i], val_loss_values[i] = early_stopped_tbnn_training_run(model_params,training_params,df_tv)
-  File "/project/6006014/rmcconke/ML/scripts/tbnn/training_utils.py", line 253, in early_stopped_tbnn_training_run
-    f"{count_nonrealizable(y_pred_train)/len(y_pred_train)*100:.2f}% / {count_nonrealizable(y_pred_val)/len(y_pred_val)*100:.2f}%")
-  File "/project/6006014/rmcconke/ML/scripts/tbnn/training_utils.py", line 167, in count_nonrealizable
-    outputs = torch.nan_to_num(outputs)
-UnboundLocalError: local variable 'outputs' referenced before assignment
