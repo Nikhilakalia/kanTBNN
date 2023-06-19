@@ -35,12 +35,27 @@ class EarlyStopper:
                 return True
         return False
 
-def bLoss(outputs, labels, alpha = 1):
-    #specifying the batch size
+def bLoss(outputs, labels, alpha = 100):
     #if torch.nonzero(torch.isnan(outputs)).sum().item() != 0: print(f'NaNs: {torch.nonzero(torch.isnan(outputs)).sum().item()}')
     #if torch.nonzero(torch.isinf(outputs)).sum().item() != 0: print(f'infs: {torch.nonzero(torch.isinf(outputs)).sum().item()}')
     outputs = torch.nan_to_num(outputs)
-    batch_size = outputs.size()[0]
+    se = squaredError(outputs, labels)
+    re = realizabilityLoss(outputs)
+    #eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
+    #zero = torch.zeros_like(outputs)
+    #zero_eig = torch.zeros_like(eigs[:,0])
+    #re = (torch.maximum(torch.maximum(outputs[:,0,0]-2/3, -(outputs[:,0,0] + 1/3)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(outputs[:,1,1]-2/3, -(outputs[:,1,1] + 1/3)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(outputs[:,2,2]-2/3, -(outputs[:,2,2] + 1/3)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(outputs[:,0,1]-1/2, -(outputs[:,0,1] + 1/2)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(outputs[:,0,2]-1/2, -(outputs[:,0,2] + 1/2)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(outputs[:,1,2]-1/2, -(outputs[:,1,2] + 1/2)), zero[:,0,0])**2 \
+    #      )/6 \
+    #    + (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) \
+    #        + (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
+    return (se.mean()+alpha*re.mean())
+
+def squaredError(outputs, labels):
     se = ((outputs[:,0,0] - labels[:,0,0])**2 \
            + (outputs[:,0,1] - labels[:,0,1])**2 \
            + (outputs[:,0,2] - labels[:,0,2])**2 \
@@ -48,99 +63,47 @@ def bLoss(outputs, labels, alpha = 1):
            + (outputs[:,1,2] - labels[:,1,2])**2 \
            + (outputs[:,2,2] - labels[:,2,2])**2 \
           )/6
-    eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
-    zero = torch.zeros_like(outputs)
-    zero_eig = torch.zeros_like(eigs[:,0])
-    re = (torch.maximum(torch.maximum(outputs[:,0,0]-2/3, -(outputs[:,0,0] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,1,1]-2/3, -(outputs[:,1,1] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,2,2]-2/3, -(outputs[:,2,2] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,0,1]-1/2, -(outputs[:,0,1] + 1/2)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,0,2]-1/2, -(outputs[:,0,2] + 1/2)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,1,2]-1/2, -(outputs[:,1,2] + 1/2)), zero[:,0,0])**2 \
-          )/6 \
-        + (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) \
-            + (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
-    return (se+alpha*re).mean()
+    return se
+
+def realizabilityPenalty(outputs):
+    re_c = realizabilityPenalty_components(outputs)
+    re_e = realizabilityPenalty_eigs(outputs)
+    return re_c + re_e
+
+def realizabilityLoss(outputs):
+    re = realizabilityPenalty(outputs)
+    return re.mean()
 
 def mseLoss(outputs, labels):
-    #specifying the batch size
-    batch_size = outputs.size()[0]
-    se = ((outputs[:,0,0] - labels[:,0,0])**2 \
-           + (outputs[:,0,1] - labels[:,0,1])**2 \
-           + (outputs[:,0,2] - labels[:,0,2])**2 \
-           + (outputs[:,1,1] - labels[:,1,1])**2 \
-           + (outputs[:,1,2] - labels[:,1,2])**2 \
-           + (outputs[:,2,2] - labels[:,2,2])**2 \
-          )/6
-    return (se).mean()
+    se = squaredError(outputs, labels)
+    return se.mean()
 
-def realizLoss_components(outputs, labels, alpha = 1):
+
+def realizabilityPenalty_components(outputs):
     #specifying the batch size
     outputs = torch.nan_to_num(outputs)
-    eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
     zero = torch.zeros_like(outputs)
-    re = (torch.maximum(torch.maximum(outputs[:,0,0]-2/3, -(outputs[:,0,0] + 1/3)), zero[:,0,0])**2 \
+    re_c = (torch.maximum(torch.maximum(outputs[:,0,0]-2/3, -(outputs[:,0,0] + 1/3)), zero[:,0,0])**2 \
         + torch.maximum(torch.maximum(outputs[:,1,1]-2/3, -(outputs[:,1,1] + 1/3)), zero[:,0,0])**2 \
         + torch.maximum(torch.maximum(outputs[:,2,2]-2/3, -(outputs[:,2,2] + 1/3)), zero[:,0,0])**2 \
         + torch.maximum(torch.maximum(outputs[:,0,1]-1/2, -(outputs[:,0,1] + 1/2)), zero[:,0,0])**2 \
         + torch.maximum(torch.maximum(outputs[:,0,2]-1/2, -(outputs[:,0,2] + 1/2)), zero[:,0,0])**2 \
         + torch.maximum(torch.maximum(outputs[:,1,2]-1/2, -(outputs[:,1,2] + 1/2)), zero[:,0,0])**2 \
           )/6 
-    return (alpha*re).mean()
+    return re_c
 
-def realizLoss_eig(outputs, labels, alpha = 1):
-    #specifying the batch size
-    outputs = torch.nan_to_num(outputs)
+def realizabilityPenalty_eigs(outputs):
     eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
-    zero = torch.zeros_like(outputs)
     zero_eig = torch.zeros_like(eigs[:,0])
-    re = (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) \
-            + (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
-    return (alpha*re).mean()
-
-def realizLoss_eig1(outputs, labels, alpha = 1):
-    #specifying the batch size
-    outputs = torch.nan_to_num(outputs)
-    eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
-    zero = torch.zeros_like(outputs)
-    zero_eig = torch.zeros_like(eigs[:,0])
-    re = (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) 
-    return (alpha*re).mean()
-
-def realizLoss_eig2(outputs, labels, alpha = 1):
-    #specifying the batch size
-    outputs = torch.nan_to_num(outputs)
-    eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
-    zero = torch.zeros_like(outputs)
-    zero_eig = torch.zeros_like(eigs[:,0])
-    re = (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
-    print(eigs)
-    return (alpha*re).mean()
-
-def realizLoss(outputs, labels, alpha = 1):
-    #specifying the batch size
-    outputs = torch.nan_to_num(outputs)
-    batch_size = outputs.size()[0]
-    eigs = torch.sort(torch.real(torch.linalg.eigvals(outputs)),descending=True)[0]
-    zero = torch.zeros_like(outputs)
-    zero_eig = torch.zeros_like(eigs[:,0])
-    re = (torch.maximum(torch.maximum(outputs[:,0,0]-2/3, -(outputs[:,0,0] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,1,1]-2/3, -(outputs[:,1,1] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,2,2]-2/3, -(outputs[:,2,2] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,0,1]-1/2, -(outputs[:,0,1] + 1/2)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,0,2]-1/2, -(outputs[:,0,2] + 1/2)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(outputs[:,1,2]-1/2, -(outputs[:,1,2] + 1/2)), zero[:,0,0])**2 \
-          )/6 \
-        + (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) \
-            + (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
-    return (alpha*re).mean()
+    re_eig1 = (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2)
+    re_eig2 = (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
+    return (re_eig1 + re_eig2)
 
 class TBNN(nn.Module):
     def __init__(self, N: int, input_dim: int, n_hidden: int, neurons: int, activation_function):
         super().__init__()
         self.N = N
         self.input_dim = input_dim   
-        
         self.gn = nn.Linear(neurons,self.N)
         self.activation_function = activation_function
         self.hidden = nn.ModuleList()
@@ -172,7 +135,6 @@ class MLP(nn.Module):
         for layer in self.hidden:
             x = self.activation_function(layer(x))
         output = self.output(x)
-        #b_pred = self.output(x).view(-1,3,3)
         b_pred = torch.column_stack((output[:,0],output[:,1],output[:,2],output[:,1],output[:,3],output[:,4],output[:,2],output[:,4],-output[:,0]-output[:,3])).view(-1,3,3)
         return b_pred
     
@@ -196,7 +158,7 @@ class bDataset(Dataset):
             T[:,i,0,2] = df[f'komegasst_T{i+1}_13']
             T[:,i,1,1] = df[f'komegasst_T{i+1}_22']
             T[:,i,1,2] = df[f'komegasst_T{i+1}_23']
-            T[:,i,2,2] = df[f'komegasst_T{i+1}_22']
+            T[:,i,2,2] = df[f'komegasst_T{i+1}_33']
             
             T[:,i,1,0] = T[:,i,0,1]
             T[:,i,2,0] = T[:,i,0,2]
@@ -228,20 +190,20 @@ class bDataset(Dataset):
         return features, Tn, target
     
 def count_nonrealizable(b):
-    b = torch.nan_to_num(b)
-    eigs = torch.sort(torch.real(torch.linalg.eigvals(b)),descending=True)[0]
-    zero = torch.zeros_like(b)
-    zero_eig = torch.zeros_like(eigs[:,0])
-    re = (torch.maximum(torch.maximum(b[:,0,0]-2/3, -(b[:,0,0] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(b[:,1,1]-2/3, -(b[:,1,1] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(b[:,2,2]-2/3, -(b[:,2,2] + 1/3)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(b[:,0,1]-1/2, -(b[:,0,1] + 1/2)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(b[:,0,2]-1/2, -(b[:,0,2] + 1/2)), zero[:,0,0])**2 \
-        + torch.maximum(torch.maximum(b[:,1,2]-1/2, -(b[:,1,2] + 1/2)), zero[:,0,0])**2 \
-          )/6 \
-        + (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) \
-            + (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
-    n_nr = torch.count_nonzero(re)
+    #b = torch.nan_to_num(b)
+    #eigs = torch.sort(torch.real(torch.linalg.eigvals(b)),descending=True)[0]
+    #zero = torch.zeros_like(b)
+    #zero_eig = torch.zeros_like(eigs[:,0])
+    #re = (torch.maximum(torch.maximum(b[:,0,0]-2/3, -(b[:,0,0] + 1/3)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(b[:,1,1]-2/3, -(b[:,1,1] + 1/3)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(b[:,2,2]-2/3, -(b[:,2,2] + 1/3)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(b[:,0,1]-1/2, -(b[:,0,1] + 1/2)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(b[:,0,2]-1/2, -(b[:,0,2] + 1/2)), zero[:,0,0])**2 \
+    #    + torch.maximum(torch.maximum(b[:,1,2]-1/2, -(b[:,1,2] + 1/2)), zero[:,0,0])**2 \
+    #      )/6 \
+    #    + (torch.maximum((3*torch.abs(eigs[:,1])-eigs[:,1])/2 - eigs[:,0],zero_eig)**2) \
+    #        + (torch.maximum(eigs[:,0] - (1/3 - eigs[:,1]),zero_eig)**2)
+    n_nr = torch.count_nonzero(realizabilityPenalty(b))
     return n_nr
 
 class Result(defaultdict):
@@ -290,12 +252,12 @@ def early_stopped_tbnn_training_run(model_params, training_params, df_tv):
                 y_pred_train, g_pred = model(X, T)
                 loss_values.append(loss_fn(y_pred_train,y).item())
                 mse_t = mseLoss(y_pred_train,y).item()  
-                rl_t = realizLoss(y_pred_train,y).item()  
+                rl_t = realizabilityLoss(y_pred_train).item()  
             for X, T, y in DataLoader(vDs, shuffle=False, batch_size=vDs.__len__()):
                 y_pred_val, g_pred = model(X, T)
                 val_loss_values.append(loss_fn(y_pred_val,y).item())   
                 mse_v = mseLoss(y_pred_val,y).item()  
-                rl_v = realizLoss(y_pred_val,y).item() 
+                rl_v = realizabilityLoss(y_pred_val).item() 
 
         if val_loss_values[-1] < early_stopper.min_validation_loss:
             best_model = copy.deepcopy(model)
@@ -360,12 +322,12 @@ def early_stopped_mlp_training_run(model_params, training_params, df_tv):
                 y_pred_train = model(X)
                 loss_values.append(loss_fn(y_pred_train,y).item())
                 mse_t = mseLoss(y_pred_train,y).item()  
-                rl_t = realizLoss(y_pred_train,y).item()  
+                rl_t = realizabilityLoss(y_pred_train).item()  
             for X, T, y in DataLoader(vDs, shuffle=False, batch_size=vDs.__len__()):
                 y_pred_val = model(X)
                 val_loss_values.append(loss_fn(y_pred_val,y).item())   
                 mse_v = mseLoss(y_pred_val,y).item()  
-                rl_v = realizLoss(y_pred_val,y).item() 
+                rl_v = realizabilityLoss(y_pred_val).item() 
 
         if val_loss_values[-1] < early_stopper.min_validation_loss:
             best_model = copy.deepcopy(model)
