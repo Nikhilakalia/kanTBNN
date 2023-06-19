@@ -1,6 +1,6 @@
 import pandas as pd
 import torch.nn as nn
-from training_utils import early_stopped_tbnn_training_run
+from tbnn.training_utils import early_stopped_tbnn_training_run
 import json
 import matplotlib.pyplot as plt
 import argparse

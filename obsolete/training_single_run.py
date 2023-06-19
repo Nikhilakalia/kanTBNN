@@ -1,6 +1,6 @@
 import pandas as pd
 import torch.nn as nn
-from training_utils import early_stopped_tbnn_training_run
+from tbnn.training_utils import early_stopped_tbnn_training_run
 
 dataset_params = {'file': '/home/ryley/WDK/ML/dataset/komegasst_split.csv',
                   'test_set': ['case_1p2','fp_3630'],
