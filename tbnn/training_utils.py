@@ -42,13 +42,13 @@ def count_nonrealizable(b):
     n_nr = torch.count_nonzero(losses.realizabilityPenalty(b))
     return n_nr
 
-def early_stopped_tbnnPlus_training_run(model, training_params, df_tv, data_loader = dataloaders.bDatasetPlus, loss_fn = losses.bLossPlus):
+def early_stopped_tbnnPlus_training_run(model, training_params, df_tv, data_loader = dataloaders.bDataset, loss_fn = losses.bLoss):
     loss_values = []
     val_loss_values = []
     df_valid = df_tv[df_tv['Case'].isin(training_params['val_set'])]
     df_train = df_tv[~df_tv['Case'].isin(training_params['val_set'])]
     tDs = data_loader(df_train, input_features=model.input_feature_names)
-    vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = tDs.scaler_X, scaler_g1tilde = tDs.scaler_g1tilde)
+    vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = tDs.scaler_X)
     loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'])
     print(f'Training points: {len(df_train)}, validation points {len(df_valid)}')
     optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'])
@@ -59,28 +59,28 @@ def early_stopped_tbnnPlus_training_run(model, training_params, df_tv, data_load
     print('=============================================================================================================')
     for epoch in range(1, training_params['max_epochs']+1):
         model.train()
-        for X_batch, T_batch, y_batch, g1tilde_batch in loader:
+        for X_batch, T_batch, y_batch in loader:
             y_pred, g_pred = model(X_batch, T_batch)
             optimizer.zero_grad()
-            loss = loss_fn(y_pred, y_batch, g_pred, g1tilde_batch)
+            loss = loss_fn(y_pred, y_batch)
             loss.backward()
             optimizer.step()
 
         model.eval()
         with torch.no_grad():
-            for X, T, y, g1tilde in DataLoader(tDs, shuffle=False, batch_size=tDs.__len__()):
+            for X, T, y in DataLoader(tDs, shuffle=False, batch_size=tDs.__len__()):
                 y_pred_train, g_pred = model(X, T)
-                loss_values.append(loss_fn(y_pred_train,y,g_pred,g1tilde).item())
+                loss_values.append(loss_fn(y_pred_train,y).item())
                 mse_b_t = losses.mseLoss(y_pred_train,y).item()  
                 rl_t = losses.realizabilityLoss(y_pred_train).item()  
-                mse_g1tilde_t = losses.g1tildeLoss(g_pred, g1tilde)
+                #mse_g1tilde_t = losses.g1tildeLoss(g_pred, g1tilde)
 
-            for X, T, y, g1tilde in DataLoader(vDs, shuffle=False, batch_size=vDs.__len__()):
+            for X, T, y in DataLoader(vDs, shuffle=False, batch_size=vDs.__len__()):
                 y_pred_val, g_pred = model(X, T)
-                val_loss_values.append(loss_fn(y_pred_val,y,g_pred,g1tilde).item())   
+                val_loss_values.append(loss_fn(y_pred_val,y).item())   
                 mse_b_v = losses.mseLoss(y_pred_val,y).item()  
                 rl_v = losses.realizabilityLoss(y_pred_val).item() 
-                mse_g1tilde_v = losses.g1tildeLoss(g_pred, g1tilde)
+                #mse_g1tilde_v = losses.g1tildeLoss(g_pred, g1tilde)
 
         if val_loss_values[-1] < early_stopper.min_validation_loss:
             best_model = copy.deepcopy(model)
@@ -90,7 +90,7 @@ def early_stopped_tbnnPlus_training_run(model, training_params, df_tv, data_load
                   f"{loss_values[-1]:.5f}   "
                   f"{val_loss_values[-1]:.5f}   "
                   f"{mse_b_t:.5f} / {mse_b_v:.5f}   "
-                  f"{mse_g1tilde_t:.5f} / {mse_g1tilde_v:.5f}   "
+                  #f"{mse_g1tilde_t:.5f} / {mse_g1tilde_v:.5f}   "
                   f"{rl_t:.5f} / {rl_v:.5f}   "
                   f"{count_nonrealizable(y_pred_train)/len(y_pred_train)*100:.2f}% / {count_nonrealizable(y_pred_val)/len(y_pred_val)*100:.2f}%")
             

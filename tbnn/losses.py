@@ -6,7 +6,7 @@ def bLoss(outputs, labels, alpha = 100):
     re = realizabilityLoss(outputs)
     return (se.mean()+alpha*re.mean())
 
-def bLossPlus(outputs, labels, g_out, g1tilde_label, alpha = 100, gamma=1):
+def bLossPlus(outputs, labels, g_out, g1tilde_label, alpha = 10, gamma=0):
     bLoss_ = bLoss(outputs, labels, alpha)
     g1Loss = g1tildeLoss(g_out,g1tilde_label)
     return (bLoss_ + gamma*g1Loss)

@@ -56,14 +56,15 @@ class bDataset(Dataset):
         return features, Tn, target
     
 class bDatasetPlus(bDataset):
-    def __init__(self, df, input_features, scaler_X=None, scaler_g1tilde=None):
+    def __init__(self, df, input_features, scaler_X=None):
         super().__init__(df, input_features, scaler_X)
-        if scaler_g1tilde == None:
-            self.scaler_g1tilde = MinMaxScaler()
-            self.scaler_g1tilde.fit((df['DNS_g1tilde'].values.astype(np.float32).reshape(-1, 1)))
-        else: 
-            self.scaler_g1tilde = scaler_g1tilde
-        self.g1tilde = torch.from_numpy(self.scaler_g1tilde.transform(df['DNS_g1tilde'].values.astype(np.float32).reshape(-1, 1))).to(device)
+        #if scaler_g1tilde == None:
+        #    self.scaler_g1tilde = MinMaxScaler()
+        #    self.scaler_g1tilde.fit((df['DNS_g1tilde'].values.astype(np.float32).reshape(-1, 1)))
+        #else: 
+        #    self.scaler_g1tilde = scaler_g1tilde
+        #self.g1tilde = torch.from_numpy(self.scaler_g1tilde.transform(df['DNS_g1tilde'].values.astype(np.float32).reshape(-1, 1))).to(device)
+        self.g1tilde = torch.from_numpy(df['DNS_g1tilde'].values.astype(np.float32).reshape(-1, 1)).to(device)
 
     def __getitem__(self, idx):
         # Note: this may need to be changed, pay attention to whether this works
