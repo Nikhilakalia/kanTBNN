@@ -43,6 +43,30 @@ class TBNNPlus(nn.Module):
         gn[:,0] = -torch.exp(gn[:,0])
         b_pred = torch.sum(gn.view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
         return b_pred, gn
+
+class TBNNPerpPlus(nn.Module):
+    def __init__(self, N: int, input_dim: int, n_hidden: int, neurons: int, activation_function, input_feature_names: list):
+        super().__init__()
+        self.N = N
+        self.input_dim = input_dim   
+        self.gn = nn.Linear(neurons,self.N-1)
+        self.activation_function = activation_function
+        self.hidden = nn.ModuleList()
+        for k in range(n_hidden):
+            self.hidden.append(nn.Linear(input_dim, neurons))
+            input_dim = neurons  # For the next layer
+        self.input_feature_names = input_feature_names
+                    
+    def forward(self, x, Tn):
+        for layer in self.hidden:
+            x = self.activation_function(layer(x))
+        gn = self.gn(x)
+        #print(gn.shape)
+        #print(torch.ones_like(gn).shape)
+        #print(torch.ones_like(gn[:,0]).view(-1,1).shape)
+        gn = torch.cat((-torch.ones_like(gn[:,0]).view(-1,1), gn), 1)
+        b_pred = torch.sum(gn.view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
+        return b_pred, gn
     
 
 class MLP(nn.Module):

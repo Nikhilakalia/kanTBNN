@@ -54,7 +54,7 @@ class bDataset(Dataset):
         target = self.y[idx]
         Tn = self.T[idx]
         return features, Tn, target
-    
+        
 class bDatasetPlus(bDataset):
     def __init__(self, df, input_features, scaler_X=None):
         super().__init__(df, input_features, scaler_X)
@@ -71,6 +71,50 @@ class bDatasetPlus(bDataset):
         features, Tn, target = super().__getitem__(idx)
         g1tilde = self.g1tilde[idx]
         return features, Tn, target, g1tilde
+
+class bPerpDataset(bDataset):
+    def __init__(self, df, input_features, scaler_X=None):
+        super().__init__(df, input_features, scaler_X)
+
+    def assemble_T(self,df):
+        T = np.empty((self.__len__(),10,3,3))
+        T[:,0,0,0] = df[f'DNS_S_11']
+        T[:,0,0,1] = df[f'DNS_S_12']
+        T[:,0,0,2] = df[f'DNS_S_13']
+        T[:,0,1,1] = df[f'DNS_S_22']
+        T[:,0,1,2] = df[f'DNS_S_23']
+        T[:,0,2,2] = df[f'DNS_S_33']
+
+        T[:,0,1,0] = T[:,0,0,1]
+        T[:,0,2,0] = T[:,0,0,2]
+        T[:,0,2,1] = T[:,0,1,2]
+        T[:,0,:] = T[:,0,:]*(np.divide(df[f'komegasst_nut'].to_numpy()[:,None,None],df[f'DNS_k'].to_numpy()[:,None,None]))
+        for i in range(1,10):
+            T[:,i,0,0] = df[f'komegasst_T{i+1}_11']
+            T[:,i,0,1] = df[f'komegasst_T{i+1}_12']
+            T[:,i,0,2] = df[f'komegasst_T{i+1}_13']
+            T[:,i,1,1] = df[f'komegasst_T{i+1}_22']
+            T[:,i,1,2] = df[f'komegasst_T{i+1}_23']
+            T[:,i,2,2] = df[f'komegasst_T{i+1}_33']
+            
+            T[:,i,1,0] = T[:,i,0,1]
+            T[:,i,2,0] = T[:,i,0,2]
+            T[:,i,2,1] = T[:,i,1,2]
+        return T
+    
+    def assemble_b(self,df):
+        b = np.empty((self.__len__(),3,3))
+        b[:,0,0] = df['DNS_b_11']
+        b[:,0,1] = df['DNS_b_12']
+        b[:,0,2] = df['DNS_b_13']
+        b[:,1,1] = df['DNS_b_22']
+        b[:,1,2] = df['DNS_b_23']
+        b[:,2,2] = df['DNS_b_33']
+        b[:,1,0] = b[:,0,1]
+        b[:,2,0] = b[:,0,2]
+        b[:,2,1] = b[:,1,2]
+        return b
+
 
 
     

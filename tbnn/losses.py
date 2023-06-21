@@ -1,6 +1,6 @@
 import torch
 
-def bLoss(outputs, labels, alpha = 100):
+def bLoss(outputs, labels, alpha = 10):
     outputs = torch.nan_to_num(outputs)
     se = squaredError(outputs, labels)
     re = realizabilityLoss(outputs)
