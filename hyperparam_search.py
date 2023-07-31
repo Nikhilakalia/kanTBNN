@@ -8,6 +8,11 @@ import numpy as np
 np.random.seed(0)
 import torch.nn as nn
 from tbnn.training_utils import early_stopped_tbnn_training_run
+import tbnn.devices as devices
+device = devices.get_device()
+import tbnn.models as models
+import tbnn.dataloaders as dataloaders
+
 import json
 import matplotlib.pyplot as plt
 import argparse
@@ -27,13 +32,13 @@ with open('param_list.json') as param_list_file:
 parser = argparse.ArgumentParser()
 parser.add_argument('cluster_number')
 
-dataset_params = {'file': 'komegasst_split.csv',
-                  'test_set': ['case_1p2','fp_3630'],
-                  'final_val_set': ['case_1p0','fp_2000','fp_3970'],
-                  'cv_val_sets': {0: ['case_0p5','fp_2540','fp_1000'],
-                                  1: ['case_0p8','fp_4060','fp_3270'],
-                                  2: ['case_1p5','fp_1410','fp_3030']}
-                }
+dataset_params = {'file': '/home/ryley/WDK/ML/dataset/komegasst_split.csv',
+                  'test_set': ['case_1p2','fp_3630','squareDuctQuadAve_Re_2205'],
+                  'final_val_set': ['case_1p0','fp_2000','fp_3970','squareDuctQuadAve_Re_2000','squareDuctQuadAve_Re_2900'],
+                  'cv_val_sets': {0: ['case_0p5','fp_2540','fp_1000','squareDuctQuadAve_Re_1250','squareDuctQuadAve_Re_1150','squareDuctQuadAve_Re_1400','squareDuctQuadAve_Re_3500'],
+                                  1: ['case_0p8','fp_4060','fp_3270','squareDuctQuadAve_Re_1300','squareDuctQuadAve_Re_1500','squareDuctQuadAve_Re_1350','squareDuctQuadAve_Re_3200'],
+                                  2: ['case_1p5','fp_1410','fp_3030','squareDuctQuadAve_Re_1100','squareDuctQuadAve_Re_2600','squareDuctQuadAve_Re_2400','squareDuctQuadAve_Re_1800','squareDuctQuadAve_Re_1600']}
+                                  }
 
 df = pd.read_csv(dataset_params['file'])
 
@@ -83,7 +88,17 @@ for search_iter, params in enumerate(param_list):
     for i, cv_val_set_i in enumerate(dataset_params['cv_val_sets'].keys()):
         print(f'\n=====| CV SET: {i}\n')
         training_params['val_set'] = dataset_params['cv_val_sets'][cv_val_set_i]
-        model, loss_values[i], val_loss_values[i] = early_stopped_tbnn_training_run(model_params,training_params,df_tv)
+        model = models.TBNNPerpPlus(N = 10,
+                        input_dim = len(model_params['input_features']),
+                        n_hidden = model_params['n_hidden'],
+                        neurons = model_params['neurons'],
+                        activation_function = model_params['activation_function'],
+                        input_feature_names=model_params['input_features']
+                    ).to(device)
+        model, loss_values[i], val_loss_values[i]  = early_stopped_tbnn_training_run(model = model,
+                                                                        training_params = training_params,
+                                                                        df_tv = df_tv,
+                                                                        data_loader = dataloaders.bPerpDataset)
         cv_score += val_loss_values[i][-1]
     
     cv_score /= len(dataset_params['cv_val_sets'].keys())

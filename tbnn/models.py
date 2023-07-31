@@ -23,6 +23,31 @@ class TBNN(nn.Module):
         b_pred = torch.sum(gn.view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
         return b_pred, gn
     
+class TBNN_k(nn.Module):
+    def __init__(self, N: int, input_dim: int, n_hidden: int, neurons: int, activation_function, input_feature_names: list):
+        super().__init__()
+        self.N = N
+        self.input_dim = input_dim   
+        self.gn = nn.Linear(neurons,self.N)
+        self.activation_function = activation_function
+        self.hidden = nn.ModuleList()
+        for k in range(n_hidden):
+            self.hidden.append(nn.Linear(input_dim, neurons))
+            input_dim = neurons  # For the next layer
+        self.input_feature_names = input_feature_names
+                    
+    def forward(self, x, k, Tn):
+        for layer in self.hidden:
+            x = self.activation_function(layer(x))
+        gn = self.gn(x)
+        b_pred = torch.sum(gn.view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
+        #print(b_pred.shape)
+        #print(k.shape)
+        #k_shape = k.repeat(3,3).view(-1,3,3)*b_pred
+        #print(k_shape.shape)
+        a_pred = 2*k.reshape(-1,1,1)*b_pred
+        return a_pred, gn
+    
 class TBNNPlus(nn.Module):
     def __init__(self, N: int, input_dim: int, n_hidden: int, neurons: int, activation_function, input_feature_names: list):
         super().__init__()

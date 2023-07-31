@@ -22,7 +22,7 @@ import tbnn.devices as devices
 device = devices.get_device()
 
 class EarlyStopper:
-    def __init__(self, patience=1, min_delta=0):
+    def __init__(self, patience=1, min_delta=1E-5):
         self.patience = patience
         self.min_delta = min_delta
         self.counter = 0
@@ -32,7 +32,7 @@ class EarlyStopper:
         if validation_loss < self.min_validation_loss:
             self.min_validation_loss = validation_loss
             self.counter = 0
-        elif validation_loss > (self.min_validation_loss + self.min_delta):
+        elif validation_loss > (self.min_validation_loss - self.min_delta):
             self.counter += 1
             if self.counter >= self.patience:
                 return True
@@ -41,7 +41,7 @@ class EarlyStopper:
 def count_nonrealizable(b):
     n_nr = torch.count_nonzero(losses.realizabilityPenalty(b))
     return n_nr
-
+"""
 def early_stopped_tbnnPlus_training_run(model, training_params, df_tv, data_loader = dataloaders.bDataset, loss_fn = losses.bLoss):
     loss_values = []
     val_loss_values = []
@@ -99,12 +99,15 @@ def early_stopped_tbnnPlus_training_run(model, training_params, df_tv, data_load
 
         lr_scheduler.step()
     return best_model, loss_values, val_loss_values
-
+"""
 def early_stopped_tbnn_training_run(model, training_params, df_tv, data_loader = dataloaders.bDataset, loss_fn = losses.bLoss):
     loss_values = []
     val_loss_values = []
     df_valid = df_tv[df_tv['Case'].isin(training_params['val_set'])]
     df_train = df_tv[~df_tv['Case'].isin(training_params['val_set'])]
+    #Note: this if statement should be removed after memorization tests
+    if len(df_train)==0:
+        df_train=df_valid
     tDs = data_loader(df_train, input_features=model.input_feature_names)
     vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = tDs.scaler_X)
     loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'])
@@ -134,6 +137,64 @@ def early_stopped_tbnn_training_run(model, training_params, df_tv, data_loader =
 
             for X, T, y in DataLoader(vDs, shuffle=False, batch_size=vDs.__len__()):
                 y_pred_val, g_pred = model(X, T)
+                val_loss_values.append(loss_fn(y_pred_val,y).item())   
+                mse_b_v = losses.mseLoss(y_pred_val,y).item()  
+                rl_v = losses.realizabilityLoss(y_pred_val).item() 
+
+        if val_loss_values[-1] < early_stopper.min_validation_loss:
+            best_model = copy.deepcopy(model)
+        if (epoch % 10==0 or epoch==1) or (early_stopper.early_stop(val_loss_values[-1])):
+            print(f"{epoch:3d}   "
+                  f"{lr_scheduler._last_lr[-1]:.3e}   "
+                  f"{loss_values[-1]:.5f}   "
+                  f"{val_loss_values[-1]:.5f}   "
+                  f"{mse_b_t:.5f} / {mse_b_v:.5f}   "
+                  f"{rl_t:.5f} / {rl_v:.5f}   "
+                  f"{count_nonrealizable(y_pred_train)/len(y_pred_train)*100:.2f}% / {count_nonrealizable(y_pred_val)/len(y_pred_val)*100:.2f}%")
+            
+        if early_stopper.early_stop(val_loss_values[-1]):
+            break   
+        
+        lr_scheduler.step()
+    return best_model, loss_values, val_loss_values
+
+def early_stopped_tbnn_training_run_k(model, training_params, df_tv, data_loader = dataloaders.bDataset_k, loss_fn = losses.mseLoss):
+    loss_values = []
+    val_loss_values = []
+    df_valid = df_tv[df_tv['Case'].isin(training_params['val_set'])]
+    df_train = df_tv[~df_tv['Case'].isin(training_params['val_set'])]
+    #Note: this if statement should be removed after memorization tests
+    if len(df_train)==0:
+        df_train=df_valid
+    tDs = data_loader(df_train, input_features=model.input_feature_names)
+    vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = tDs.scaler_X)
+    loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'])
+    print(f'Training points: {len(df_train)}, validation points {len(df_valid)}')
+    optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'])
+    lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=training_params['learning_rate_decay'])
+    early_stopper = EarlyStopper(patience=training_params['early_stopping_patience'], min_delta=1E-6)
+
+    print('EPOCH    LR        TRAIN     VALID         MSE:T/V              RL:T/V         %NR_t/%NR_v')
+    print('=============================================================================================')
+    for epoch in range(1, training_params['max_epochs']+1):
+        model.train()
+        for X_batch, k_batch, T_batch, y_batch in loader:
+            y_pred, g_pred = model(X_batch, k_batch, T_batch)
+            optimizer.zero_grad()
+            loss = loss_fn(y_pred, y_batch)
+            loss.backward()
+            optimizer.step()
+
+        model.eval()
+        with torch.no_grad():
+            for X, k, T, y in DataLoader(tDs, shuffle=False, batch_size=tDs.__len__()):
+                y_pred_train, g_pred = model(X, k, T)
+                loss_values.append(loss_fn(y_pred_train,y).item())
+                mse_b_t = losses.mseLoss(y_pred_train,y).item()  
+                rl_t = losses.realizabilityLoss(y_pred_train).item()  
+
+            for X, k, T, y in DataLoader(vDs, shuffle=False, batch_size=vDs.__len__()):
+                y_pred_val, g_pred = model(X, k, T)
                 val_loss_values.append(loss_fn(y_pred_val,y).item())   
                 mse_b_v = losses.mseLoss(y_pred_val,y).item()  
                 rl_v = losses.realizabilityLoss(y_pred_val).item() 
