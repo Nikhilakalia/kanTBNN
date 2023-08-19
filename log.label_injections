@@ -1,0 +1,5 @@
+[dataFoam] Writing nut_L to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_label_injection/0/nut_L
+[dataFoam] Writing aperp to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_label_injection/0/aperp
+[dataFoam] Writing DNS_k to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_label_injection/0/DNS_k
+[dataFoam] Writing nut_L to file /home/ryley/WDK/ML/scratch/injection/case_1p2_label_injection/0/nut_L
+[dataFoam] Writing aperp to file /home/ryley/WDK/ML/scratch/injection/case_1p2_label_injection/0/aperp
