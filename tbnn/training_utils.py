@@ -50,7 +50,8 @@ def early_stopped_tbnn_training_run(model, df_train, df_valid, training_params):
     val_loss_values = []
 
     tDs = data_loader(df_train, input_features=model.input_feature_names)
-    vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = tDs.scaler_X)
+    model.input_feature_scaler = tDs.scaler_X
+    vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = model.input_feature_scaler)
     loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'])
     optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'])
     lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=training_params['learning_rate_decay'])
@@ -76,11 +77,16 @@ def early_stopped_tbnn_training_run(model, df_train, df_valid, training_params):
 
         if val_loss_values[-1] < early_stopper.min_validation_loss:
             best_model = copy.deepcopy(model)
+            best_epoch = epoch
+            best_lr = lr_scheduler._last_lr[-1]
 
         if (epoch % 10==0 or epoch==1) or (early_stopper.early_stop(val_loss_values[-1])):
             evaluate.print_intermediate_info(model,[tDs,vDs],loss_fn,mseLoss,epoch,lr_scheduler._last_lr[-1])
             
         if early_stopper.early_stop(val_loss_values[-1]):
+            print('BEST MODEL')
+            print_table_footer()
+            evaluate.print_intermediate_info(best_model,[tDs,vDs],loss_fn,mseLoss,best_epoch,best_lr)
             break   
         
         lr_scheduler.step()
@@ -99,6 +105,12 @@ def plot_loss_curve(loss_vals, val_loss_vals, filename):
 def get_dataframes(dataset_params,print_info = False):
     df = pd.read_csv(dataset_params['file'])
     df = df[df['Case'].isin(dataset_params['Cases'])]
+
+    cluster_flag = False
+    if 'cluster' in dataset_params:
+        df = df[df['Cluster']==dataset_params['cluster']]
+        cluster_flag = True
+        
     df_train = df[~df['Case'].isin(dataset_params['test_set']+dataset_params['val_set'])].copy()
     df_valid = df[df['Case'].isin(dataset_params['val_set'])].copy()
     df_test = df[df['Case'].isin(dataset_params['test_set'])].copy()
@@ -113,6 +125,10 @@ def get_dataframes(dataset_params,print_info = False):
         print(f'Dataset params: {dataset_params}')
         print(f'Train/Valid/Test points: {len(df_train)} / {len(df_valid)} / {len(df_test)}')
         print(f'Memorization?: {memorization_flag}')
+        print(f'Cluster training?: {cluster_flag}')
+        if cluster_flag:
+            print(f'Cluster: {dataset_params["cluster"]}')
+    
     return df, df_train, df_valid, df_test
 
 def print_table_header():

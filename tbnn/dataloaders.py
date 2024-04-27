@@ -8,14 +8,18 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 class bDataset(Dataset):
     def __init__(self, df, input_features, scaler_X=None, Perp=True, assemble_labels=True):
-        if scaler_X == None:
-            self.scaler_X = StandardScaler()
-            self.scaler_X.fit((df[input_features].values.astype(np.float32)))
-        else: 
-            self.scaler_X = scaler_X
         self.Perp = Perp
-        self.X = torch.from_numpy(self.scaler_X.transform(df[input_features].values.astype(np.float32))).to(device)
-        self.T = torch.from_numpy(np.float32(self.assemble_T(df))).to(device)
+        if input_features is not None:
+            if scaler_X == None:
+                self.scaler_X = StandardScaler()
+                self.scaler_X.fit((df[input_features].values.astype(np.float32)))
+            else: 
+                self.scaler_X = scaler_X
+            self.X = torch.from_numpy(self.scaler_X.transform(df[input_features].values.astype(np.float32))).to(device)
+            self.T = torch.from_numpy(np.float32(self.assemble_T(df))).to(device)
+        else:
+            self.X = torch.empty(len(df))
+            self.T = torch.empty(len(df))
 
         if assemble_labels:
             self.b = torch.from_numpy(np.float32(self.assemble_b(df))).to(device)

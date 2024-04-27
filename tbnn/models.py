@@ -1,5 +1,7 @@
 import torch
 import torch.nn as nn
+import pickle
+from tbnn.barcode import datestamp
 
 class TBNNi(nn.Module):
     """
@@ -16,7 +18,10 @@ class TBNNi(nn.Module):
             self.hidden.append(nn.Linear(input_dim, neurons))
             input_dim = neurons  # For the next layer
         self.input_feature_names = input_feature_names
-                    
+        self.input_feature_scaler = None
+        self.barcode = f'TBNNi-{datestamp}'
+
+
     def forward(self, x, Tn):
         for layer in self.hidden:
             x = self.activation_function(layer(x))
@@ -39,6 +44,9 @@ class TBNNii(nn.Module):
             self.hidden.append(nn.Linear(input_dim, neurons))
             input_dim = neurons  # For the next layer
         self.input_feature_names = input_feature_names
+        self.input_feature_scaler = None
+        self.barcode = f'TBNNii-{datestamp}'
+
                     
     def forward(self, x, Tn):
         for layer in self.hidden:
@@ -63,6 +71,9 @@ class TBNNiii(nn.Module):
             self.hidden.append(nn.Linear(input_dim, neurons))
             input_dim = neurons  # For the next layer
         self.input_feature_names = input_feature_names
+        self.input_feature_scaler = None
+        self.barcode = f'TBNNiii-{datestamp}'
+
                     
     def forward(self, x, Tn):
         for layer in self.hidden:
@@ -72,24 +83,21 @@ class TBNNiii(nn.Module):
         b_pred = torch.sum(gn.view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
         return b_pred, gn
     
-class MLP(nn.Module):
+class clusterTBNN():
     """
-    Plain MLP.
+    An assembly of models.
     """
-    def __init__(self, input_dim: int, n_hidden: int, neurons: int, activation_function):
-        super().__init__()
-        self.input_dim = input_dim   
+    def __init__(self, model_dict):
+        self.model_dict = model_dict
+        self.assemble_models()
+        self.splitr_input_features = model_dict['splitr_input_features']
+        self.barcode = f'clusterTBNN-{datestamp}'
 
-        self.activation_function = activation_function
-        self.hidden = nn.ModuleList()
-        for k in range(n_hidden):
-            self.hidden.append(nn.Linear(input_dim, neurons))
-            input_dim = neurons  # For the next layer
-        self.output = nn.Linear(neurons, 5)
-                    
-    def forward(self, x):
-        for layer in self.hidden:
-            x = self.activation_function(layer(x))
-        output = self.output(x)
-        b_pred = torch.column_stack((output[:,0],output[:,1],output[:,2],output[:,1],output[:,3],output[:,4],output[:,2],output[:,4],-output[:,0]-output[:,3])).view(-1,3,3)
-        return b_pred
+    def assemble_models(self):
+        self.splitr = pickle.load(open(self.model_dict['splitr'], 'rb')) 
+        self.splitr_scaler = pickle.load(open(self.model_dict['splitr_scaler'], 'rb')) 
+        self.tbnn_list = []
+        for tbnni in self.model_dict['models'].keys():
+            self.tbnn_list.append(torch.load(self.model_dict['models'][tbnni]))
+        
+        
