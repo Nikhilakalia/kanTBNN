@@ -1,0 +1,13 @@
+=====> WARNING: Training dataset length: 0, assuming memorization test!
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['fp_2540'], 'val_set': ['fp_2540'], 'test_set': ['fp_2540'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 155 / 155 / 155
+Memorization?: True
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   5.000E-03   1.0078E+02   1.0078E+02   1.0078E+02 / 1.0078E+02   0.0000E+00 / 0.0000E+00   0.00% / 0.00%
+ 10   5.000E-03   9.0768E+01   9.0768E+01   9.0768E+01 / 9.0768E+01   0.0000E+00 / 0.0000E+00   0.00% / 0.00%
+ 20   5.000E-03   2.6013E+01   2.6013E+01   2.6013E+01 / 2.6013E+01   0.0000E+00 / 0.0000E+00   0.00% / 0.00%
+===============================================================================================================
+Saved model to models/fp_memorization/TBNNiii-24Apr30_09:46:05.pickle

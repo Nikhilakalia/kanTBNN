@@ -3,6 +3,7 @@ from tbnn.training_utils import early_stopped_tbnn_training_run, plot_loss_curve
 import tbnn.evaluate as evaluate
 import matplotlib.pyplot as plt
 import tbnn.devices as devices
+from evaluation_config import evaluate_model_with_config
 device = devices.get_device()
 import argparse
 parser = argparse.ArgumentParser()
@@ -38,6 +39,7 @@ model, loss_vals, val_loss_vals  = early_stopped_tbnn_training_run(model = model
                                                                    df_train = df_train,
                                                                    df_valid = df_valid,
                                                                    training_params = training_params,
+                                                                   results_dir = results_dir
                                                                    )
 model.eval()
 save_model(model, os.path.join(results_dir,f'{model.barcode}.pickle'))
@@ -48,10 +50,12 @@ plot_loss_curve(loss_vals,
                              f'{model.barcode}_losses.png')
                 )
 
+evaluate_model_with_config(model.barcode,config)
 #evaluate.periodic_hills(model, config)
-if config.evaluation is not None:
-    config.evaluation(model, config)
+#if config.evaluation is not None:
+#    config.evaluation(model, config)
 #evaluate.square_duct(model, config)
 
 #evaluate.periodic_hills(model, config)
+
 

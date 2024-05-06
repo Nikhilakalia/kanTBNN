@@ -28,7 +28,7 @@ training_params = { 'loss_fn': partial(losses.aLoss),
                 }
 
 model_params = {
-    'model_type': tbnn.models.TBNNiii,
+    'model_type': tbnn.models.TBNNiv,
     'neurons': 30, 
     'n_hidden': 5, 'activation_function': nn.SiLU(),                 
     'input_features':[

@@ -83,6 +83,33 @@ class TBNNiii(nn.Module):
         b_pred = torch.sum(gn.view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
         return b_pred, gn
     
+class TBNNiv(nn.Module):
+    """
+    TBNNPerp, with g1 forced to be -1, and k correction factor
+    """
+    def __init__(self, N: int, input_dim: int, n_hidden: int, neurons: int, activation_function, input_feature_names: list):
+        super().__init__()
+        self.N = N
+        self.input_dim = input_dim   
+        self.gn = nn.Linear(neurons,self.N) #N-1 for 9 g's, N for 9 g's + k correction
+        self.activation_function = activation_function
+        self.hidden = nn.ModuleList()
+        for k in range(n_hidden):
+            self.hidden.append(nn.Linear(input_dim, neurons))
+            input_dim = neurons  # For the next layer
+        self.input_feature_names = input_feature_names
+        self.input_feature_scaler = None
+        self.barcode = f'TBNNiii-{datestamp}'
+
+                    
+    def forward(self, x, Tn):
+        for layer in self.hidden:
+            x = self.activation_function(layer(x))
+        gn = self.gn(x)
+        gn = torch.cat((-torch.ones_like(gn[:,0]).view(-1,1), gn), 1)
+        b_pred = torch.sum(gn[:,0:-1].view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
+        return b_pred, gn
+    
 class clusterTBNN():
     """
     An assembly of models.

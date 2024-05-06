@@ -24,17 +24,17 @@ def final_model(model, dataframes, config):
     assert len(dataframes) <= 3 
 
     for i, dfi in enumerate(dataframes):
-        b_pred, _, _ = predict.TBNN(model,dfi)
+        g_pred, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,dfi)
         ds = config.dataset_params['data_loader'](dfi, input_features=None)
         for _,labels in DataLoader(ds , shuffle=False, batch_size=ds.__len__()):
             print(f'======= {names[i]} =======')
-            print(f'{config.training_params["loss_fn"].func.__name__}:   {loss_fn(b_pred, *labels):.4E}')
-            print(f'mse_b:   {losses.mseLoss(b_pred, labels[-1]).item():.4E}')
+            print(f'{config.training_params["loss_fn"].func.__name__}:   {loss_fn(b_pred, g_pred, *labels):.4E}')
+            print(f'mse_b:   {losses.mseLoss(b_pred, labels[-2]).item():.4E}')
             print(f'realzLoss: {losses.realizabilityLoss(b_pred).item():.4E}')
             print(f'%unrealiz: {training_utils.count_nonrealizable(b_pred)/len(b_pred)*100:.4f}%')
         ds = dataloaders.aDataset(dfi, input_features=None)
         for _,labels in DataLoader(ds , shuffle=False, batch_size=ds.__len__()):
-            print(f'mse_a (khat):   {losses.mseLoss_khat(b_pred, *labels).item():.4E}')
+            print(f'mse_a (khat):   {losses.mseLoss_aLoss(b_pred, g_pred, *labels).item():.4E}')
 
 def intermediate_model(model, datasets, loss_fn):
     """
@@ -42,11 +42,11 @@ def intermediate_model(model, datasets, loss_fn):
     """
     for inputs,labels in DataLoader(datasets[0] , shuffle=False, batch_size=datasets[0].__len__()):
         y_pred, g_pred = model(*inputs)
-        loss_t = loss_fn(y_pred, *labels).item()
+        loss_t = loss_fn(y_pred, g_pred, *labels).item()
 
     for inputs,labels in DataLoader(datasets[1] , shuffle=False, batch_size=datasets[1].__len__()):
         y_pred, g_pred = model(*inputs)
-        loss_v = loss_fn(y_pred, *labels).item()
+        loss_v = loss_fn(y_pred, g_pred, *labels).item()
 
     return loss_t, loss_v
  
@@ -57,12 +57,12 @@ def print_intermediate_info(model, datasets, loss_fn, mseLoss, epoch, lr):
     loss_t, loss_v = intermediate_model(model, datasets, loss_fn)
     for inputs,labels in DataLoader(datasets[0] , shuffle=False, batch_size=datasets[0].__len__()):
         y_pred_t, g_pred = model(*inputs)
-        mse_t = mseLoss(y_pred_t, *labels).item()
+        mse_t = mseLoss(y_pred_t, g_pred, *labels).item()
         rl_t = losses.realizabilityLoss(y_pred_t).item()  \
         
     for inputs,labels in DataLoader(datasets[1] , shuffle=False, batch_size=datasets[1].__len__()):
         y_pred_v, g_pred = model(*inputs)
-        mse_v = mseLoss(y_pred_v, *labels).item()
+        mse_v = mseLoss(y_pred_v, g_pred, *labels).item()
         rl_v = losses.realizabilityLoss(y_pred_v).item()  
         print(f"{epoch:3d}   "
                 f"{lr:.3E}   "
@@ -83,13 +83,15 @@ def periodic_hills(model, config):
     df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'case_1p2'].copy()
     final_model(model,[df_train, df_valid, df_test],config)
-    b_pred, gn, b_perp_pred = predict.TBNN(model,df_test)
+    gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,df_test,k_name='komegasst_k')
 
     nut_L = df_test['komegasst_nut'].to_numpy()
 
-    a_perp_pred = b_perp_pred*2*df_test['DNS_k'].to_numpy()[:,None,None]
-
-    df_test = add_predictions_to_df(b_pred, gn, df_test)
+    df_test = add_predictions_to_df(gn.detach().numpy(),
+                                    b_pred.detach().numpy(),
+                                    b_perp_pred.detach().numpy(),
+                                    a_pred, a_perp_pred,
+                                    df_test)
     fig, axs = plt.subplots(nrows=2,ncols=6,figsize=(15,3))
     for i, scalar in enumerate(['b_11','b_12','b_13','b_22','b_23','b_33']):
         vmin = min(df_test[f'DNS_{scalar}'])
@@ -128,13 +130,15 @@ def square_duct(model,config):
     df_test = df[df['Case'] == 'squareDuctAve_Re_2000'].copy()
 
     final_model(model,[df_train, df_valid, df_test],config)
-    b_pred, gn, b_perp_pred = predict.TBNN(model,df_test)
+    gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,df_test, k_name = 'komegasst_k')
 
     nut_L = df_test['komegasst_nut'].to_numpy()
 
-    a_perp_pred = b_perp_pred*2*df_test['DNS_k'].to_numpy()[:,None,None]
-
-    df_test = add_predictions_to_df(b_pred, gn, df_test)
+    df_test = add_predictions_to_df(gn.detach().numpy(),
+                                    b_pred.detach().numpy(),
+                                    b_perp_pred.detach().numpy(),
+                                    a_pred, a_perp_pred,
+                                    df_test)
     fig, axs = plt.subplots(nrows=2,ncols=6,figsize=(15,3))
     for i, scalar in enumerate(['b_11','b_12','b_13','b_22','b_23','b_33']):
         vmin = min(df_test[f'DNS_{scalar}'])
@@ -157,7 +161,9 @@ def square_duct(model,config):
     fig.savefig(os.path.join(config.results_dir,f'{model.barcode}_duct_a_test.png'),dpi=300)
     
     df_test = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_raw_squareDuctFull_Re_2000.csv')
-    b_pred, gn, b_perp_pred = predict.TBNN(model,df_test)
+    gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,df_test, k_name='komegasst_k')
+    nut_L = df_test['komegasst_nut'].to_numpy()
+
     endtime = '0'
     foamdir = os.path.join(f'/home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_{config.run_name}')
     writeFoam_nut_L_DUCT(os.path.join(foamdir,endtime,'nut_L'),nut_L)
@@ -175,13 +181,17 @@ def flatplate(model,config):
     df_test = df[df['Case'] == 'fp_3630'].copy()
 
     final_model(model,[df_train, df_valid, df_test],config)
-    b_pred, gn, b_perp_pred = predict.TBNN(model,df_test)
+    gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,df_test, k_name='komegasst_k')
 
-    nut_L = -df_test['komegasst_nut'].to_numpy()
+    #nut_L = -df_test['komegasst_nut'].to_numpy()
 
-    a_perp_pred = b_perp_pred*2*df_test['DNS_k'].to_numpy()[:,None,None]
+    #a_perp_pred = b_perp_pred*2*(gn[:,-1]*df_test['DNS_k'].to_numpy())[:,None,None]
 
-    df_test = add_predictions_to_df(b_pred, gn, df_test)
+    df_test = add_predictions_to_df(gn.detach().numpy(),
+                                    b_pred.detach().numpy(),
+                                    b_perp_pred.detach().numpy(),
+                                    a_pred, a_perp_pred,
+                                    df_test)
 
     fig, axs = plt.subplots(nrows=3,ncols=3,figsize=(15,15))
     axs[0,0].scatter(df_test['komegasst_C_2'],df_test['DNS_b_11'])
@@ -225,29 +235,34 @@ def flatplate(model,config):
 
     fig.savefig(os.path.join(config.results_dir,f'{model.barcode}_fp_a_test.png'),dpi=300)
 
-def add_predictions_to_df(b_pred, gn, df_test):
-    df_test[f'pred_b_11'] = b_pred.detach().numpy()[:,0,0]
-    df_test[f'pred_b_12'] = b_pred.detach().numpy()[:,0,1]
-    df_test[f'pred_b_13'] = b_pred.detach().numpy()[:,0,2]
-    df_test[f'pred_b_22'] = b_pred.detach().numpy()[:,1,1]
-    df_test[f'pred_b_23'] = b_pred.detach().numpy()[:,1,2]
-    df_test[f'pred_b_33'] = b_pred.detach().numpy()[:,2,2]
+def add_predictions_to_df(gn, b_pred, b_perp_pred, a_pred, a_perp_pred, df_test):
+    df_test[f'pred_b_11'] = b_pred[:,0,0]
+    df_test[f'pred_b_13'] = b_pred[:,0,2]
+    df_test[f'pred_b_22'] = b_pred[:,1,1]
+    df_test[f'pred_b_12'] = b_pred[:,0,1]
+    df_test[f'pred_b_23'] = b_pred[:,1,2]
+    df_test[f'pred_b_33'] = b_pred[:,2,2]
 
-    df_test[f'pred_a_11'] = b_pred.detach().numpy()[:,0,0]*2*df_test[f'DNS_k']
-    df_test[f'pred_a_12'] = b_pred.detach().numpy()[:,0,1]*2*df_test[f'DNS_k']
-    df_test[f'pred_a_13'] = b_pred.detach().numpy()[:,0,2]*2*df_test[f'DNS_k']
-    df_test[f'pred_a_22'] = b_pred.detach().numpy()[:,1,1]*2*df_test[f'DNS_k']
-    df_test[f'pred_a_23'] = b_pred.detach().numpy()[:,1,2]*2*df_test[f'DNS_k']
-    df_test[f'pred_a_33'] = b_pred.detach().numpy()[:,2,2]*2*df_test[f'DNS_k']
+    df_test[f'pred_a_11'] = a_pred[:,0,0]
+    df_test[f'pred_a_12'] = a_pred[:,0,1]
+    df_test[f'pred_a_13'] = a_pred[:,0,2]
+    df_test[f'pred_a_22'] = a_pred[:,1,1]
+    df_test[f'pred_a_23'] = a_pred[:,1,2]
+    df_test[f'pred_a_33'] = a_pred[:,2,2]
 
     df_test[f'pred_g1'] = -np.ones(len(b_pred))
-    df_test[f'pred_g2'] = gn[:,1].detach().numpy()
-    df_test[f'pred_g3'] = gn[:,2].detach().numpy()
-    df_test[f'pred_g4'] = gn[:,3].detach().numpy()
-    df_test[f'pred_g5'] = gn[:,4].detach().numpy()
-    df_test[f'pred_g6'] = gn[:,5].detach().numpy()
-    df_test[f'pred_g7'] = gn[:,6].detach().numpy()
-    df_test[f'pred_g8'] = gn[:,7].detach().numpy()
-    df_test[f'pred_g9'] = gn[:,8].detach().numpy()
-    df_test[f'pred_g10'] = gn[:,9].detach().numpy()
+    df_test[f'pred_g2'] = gn[:,1]
+    df_test[f'pred_g3'] = gn[:,2]
+    df_test[f'pred_g4'] = gn[:,3]
+    df_test[f'pred_g5'] = gn[:,4]
+    df_test[f'pred_g6'] = gn[:,5]
+    df_test[f'pred_g7'] = gn[:,6]
+    df_test[f'pred_g8'] = gn[:,7]
+    df_test[f'pred_g9'] = gn[:,8]
+    df_test[f'pred_g10'] = gn[:,9]
+    df_test[f'pred_logDelta'] = gn[:,10]
+
     return df_test
+
+
+

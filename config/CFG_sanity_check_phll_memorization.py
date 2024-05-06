@@ -19,18 +19,18 @@ dataset_params = {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.c
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss),
-                    'max_epochs': 2000,
+                    'max_epochs': 10000,
                     'learning_rate': 0.0001,
                     'learning_rate_decay': 1.0,
-                    'batch_size': 32,
-                    'early_stopping_patience': 100,
+                    'batch_size': 128,
+                    'early_stopping_patience': 500,
                     'early_stopping_min_delta': 1E-8,
                 }
 
 model_params = {
-    'model_type': tbnn.models.TBNNiii,
-    'neurons': 40, 
-    'n_hidden': 3, 'activation_function': nn.SiLU(),                 
+    'model_type': tbnn.models.TBNNiv,
+    'neurons': 30, 
+    'n_hidden': 9, 'activation_function': nn.SiLU(),                 
     'input_features':[
   'komegasst_q6',
   'komegasst_q5',

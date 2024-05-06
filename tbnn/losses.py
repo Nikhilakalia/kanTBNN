@@ -8,14 +8,14 @@ def mseLoss(outputs, labels):
     se = squaredError(outputs, labels)
     return se.mean()
 
-def mseLoss_khat(b_pred, khat, b_label):
-    se = torch.square(khat)*squaredError(b_pred, b_label)
-    return se.mean()
+def aLoss(b_pred, g_pred, k, a_label, amagmean, alpha = 1):
+    se = mseLoss_aLoss(b_pred, g_pred, k, a_label, amagmean)
+    re = (1/torch.square(amagmean)*2*k*realizabilityPenalty(b_pred)).mean()
+    return se + alpha*re
 
-def aLoss(b_pred, khat, b_label, alpha = 1):
-    mse = mseLoss_khat(b_pred, khat, b_label)
-    re = torch.square(khat)*realizabilityLoss(b_pred)
-    return (mse+alpha*re.mean())
+def mseLoss_aLoss(b_pred, g_pred, k, a_label, amagmean):
+    se = 1/(torch.square(amagmean).reshape(-1,1,1)) * squaredError(2*(torch.exp(g_pred[:,-1])*k).reshape(-1,1,1)*b_pred, a_label)
+    return se.mean()
 
 def bLoss(outputs, labels, alpha = 1):
     outputs = torch.nan_to_num(outputs)

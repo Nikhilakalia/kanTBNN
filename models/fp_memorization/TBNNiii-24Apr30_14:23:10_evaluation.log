@@ -1,0 +1,28 @@
+===================================
+=======FLAT PLATE EVALUATION=======
+===================================
+=====> WARNING: Training dataset length: 0, assuming memorization test!
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['fp_2540'], 'val_set': ['fp_2540'], 'test_set': ['fp_2540'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 155 / 155 / 155
+Memorization?: True
+Cluster training?: False
+Final model performance:
+======= Training =======
+mseLoss_aLoss:   3.1263E+00
+mse_b:   1.0095E+02
+realzLoss: 1.3134E-01
+%unrealiz: 38.0645%
+mse_a (khat):   3.1263E+00
+======= Validation =======
+mseLoss_aLoss:   3.1263E+00
+mse_b:   1.0095E+02
+realzLoss: 1.3134E-01
+%unrealiz: 38.0645%
+mse_a (khat):   3.1263E+00
+======= Testing =======
+mseLoss_aLoss:   4.7475E+01
+mse_b:   9.3981E+01
+realzLoss: 1.2348E-01
+%unrealiz: 35.7143%
+mse_a (khat):   4.7475E+01

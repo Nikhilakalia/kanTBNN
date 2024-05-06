@@ -12,39 +12,44 @@ results_dir = os.path.join('models',run_name)
 evaluation = tbnn.evaluate.flatplate
 
 dataset_params = {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv',
-                  'Cases': ['fp_2540'],
-                  'val_set': ['fp_2540'],#['squareDuctQuad1_Re_1300','squareDuctQuad1_Re_1800','squareDuctQuad1_Re_3200'],
-                  'test_set': ['fp_2540']
+                  'Cases': ['fp_3630'],
+                  'val_set': ['fp_3630'],#['squareDuctQuad1_Re_1300','squareDuctQuad1_Re_1800','squareDuctQuad1_Re_3200'],
+                  'test_set': ['fp_3630']
                 }
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss),
-                    'max_epochs': 5000,
-                    'learning_rate': 0.005,
+                    'max_epochs': 10000,
+                    'learning_rate': 0.0005,
                     'learning_rate_decay': 1.0,
-                    'batch_size': 64,
-                    'early_stopping_patience': 500,
+                    'batch_size': 32,
+                    'early_stopping_patience': 1000,
                     'early_stopping_min_delta': 1E-8,
                 }
 
 model_params = {
-    'model_type': tbnn.models.TBNNiii,
-    'neurons': 20, 
-    'n_hidden': 3, 'activation_function': nn.SiLU(),                 
+    'model_type': tbnn.models.TBNNiv,
+    'neurons': 30, 
+    'n_hidden': 6, 'activation_function': nn.SiLU(),                 
     'input_features':[
     'komegasst_I1_1',
 'komegasst_I1_3',
 'komegasst_I1_4',
 'komegasst_I1_5',
 'komegasst_I1_16',
+# below were commented
 #'komegasst_I1_7',
 #'komegasst_I1_9',
 #'komegasst_I1_10',
 #'komegasst_I1_12',
 #'komegasst_I1_13',
-#'komegasst_I1_16',
+'komegasst_I1_16',
+#
 'komegasst_q5',
 #'komegasst_q6',
+'komegasst_q1',
+'komegasst_q2',
+'komegasst_q3'
     ]
 }
 
