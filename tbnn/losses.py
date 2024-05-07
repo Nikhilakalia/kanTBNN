@@ -14,7 +14,7 @@ def aLoss(b_pred, g_pred, k, a_label, amagmean, alpha = 1):
     return se + alpha*re
 
 def mseLoss_aLoss(b_pred, g_pred, k, a_label, amagmean):
-    se = 1/(torch.square(amagmean).reshape(-1,1,1)) * squaredError(2*(torch.exp(g_pred[:,-1])*k).reshape(-1,1,1)*b_pred, a_label)
+    se = 1/(torch.square(amagmean)).reshape(-1,1,1) * squaredError(2*(torch.exp(g_pred[:,-1])*k).reshape(-1,1,1)*b_pred, a_label)
     return se.mean()
 
 def bLoss(outputs, labels, alpha = 1):

@@ -19,7 +19,7 @@ dataset_params = {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.c
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss),
-                    'max_epochs': 10000,
+                    'max_epochs': 5000,
                     'learning_rate': 0.0005,
                     'learning_rate_decay': 1.0,
                     'batch_size': 32,
