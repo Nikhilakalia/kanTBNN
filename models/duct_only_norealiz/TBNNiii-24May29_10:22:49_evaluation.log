@@ -1,0 +1,29 @@
+===================================
+======SQUARE DUCT EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 110592 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   5.5623E-04
+mse_b:   6.6057E-02
+realzLoss: 3.5288E-04
+%unrealiz: 15.9460%
+mse_a:   2.8994E-09
+======= Validation =======
+aLoss:   5.7895E-04
+mse_b:   6.2155E-02
+realzLoss: 2.4431E-04
+%unrealiz: 11.9538%
+mse_a:   3.1116E-09
+======= Testing =======
+aLoss:   3.7524E-04
+mse_b:   5.9701E-02
+realzLoss: 8.8686E-05
+%unrealiz: 9.2014%
+mse_a:   2.2459E-09
+[dataFoam] Writing nut_L to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_duct_only_norealiz/0/nut_L
+[dataFoam] Writing aperp to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_duct_only_norealiz/0/aperp

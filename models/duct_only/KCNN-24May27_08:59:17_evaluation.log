@@ -1,0 +1,15 @@
+===================================
+======SQUARE DUCT EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 110592 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+mse_Delta:   3.1326E-02
+======= Validation =======
+mse_Delta:   2.6362E-02
+======= Testing =======
+mse_Delta:   1.7608E-02

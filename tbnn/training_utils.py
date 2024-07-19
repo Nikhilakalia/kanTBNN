@@ -18,7 +18,7 @@ import tbnn.losses as losses
 import tbnn.dataloaders as dataloaders
 import tbnn.models as models
 import tbnn.evaluate as evaluate
-
+import csv
 import tbnn.devices as devices
 import os
 device = devices.get_device()
@@ -44,7 +44,7 @@ def count_nonrealizable(b):
     n_nr = torch.count_nonzero(losses.realizabilityPenalty(b))
     return n_nr
 
-def early_stopped_tbnn_training_run(model, df_train, df_valid, training_params, results_dir): #data_loader = dataloaders.aDataset):
+def early_stopped_training_run(model, df_train, df_valid, training_params, results_dir): #data_loader = dataloaders.aDataset):
     loss_fn = training_params['loss_fn']
     data_loader, mseLoss = get_dataloader_type(loss_fn)
     loss_values = []
@@ -54,7 +54,7 @@ def early_stopped_tbnn_training_run(model, df_train, df_valid, training_params, 
     model.input_feature_scaler = tDs.scaler_X
     vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = model.input_feature_scaler)
     loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'])
-    optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'], amsgrad=True)
+    optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'], amsgrad=False)
     #optimizer = optim.SGD(model.parameters(), lr=training_params['learning_rate'], nesterov=True, momentum=0.9)
 
     lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=optimizer, gamma=training_params['learning_rate_decay'])
@@ -65,9 +65,9 @@ def early_stopped_tbnn_training_run(model, df_train, df_valid, training_params, 
     for epoch in range(1, training_params['max_epochs']+1):
         model.train()
         for inputs, labels in loader:
-            y_pred, g_pred = model(*inputs) #(X_batch, #Tn_batch)
+            outputs = model(*inputs) #(X_batch, #Tn_batch) 
             optimizer.zero_grad()
-            loss = loss_fn(y_pred, g_pred, *labels) #Sometimes, labels is just b, sometimes, it is k and a (depends on dataLoader)
+            loss = loss_fn(*outputs, *labels) #Sometimes, labels is just b, sometimes, it is k and a (depends on dataLoader)
             loss.backward()
             optimizer.step()
 
@@ -109,8 +109,12 @@ def plot_loss_curve(loss_vals, val_loss_vals, filename):
     fig.tight_layout()
     fig.savefig(filename,dpi=300)
     plt.close()
+    with open(filename+'losses.csv', 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerows([loss_vals,val_loss_vals])
 
-def get_dataframes(dataset_params,print_info = False):
+
+def get_dataframes(dataset_params,print_info = False, sample_frac_train = 1.0):
     df = pd.read_csv(dataset_params['file'])
     df = df[df['Case'].isin(dataset_params['Cases'])]
 
@@ -120,6 +124,7 @@ def get_dataframes(dataset_params,print_info = False):
         cluster_flag = True
         
     df_train = df[~df['Case'].isin(dataset_params['test_set']+dataset_params['val_set'])].copy()
+    df_train = df_train.sample(frac=sample_frac_train)
     df_valid = df[df['Case'].isin(dataset_params['val_set'])].copy()
     df_test = df[df['Case'].isin(dataset_params['test_set'])].copy()
 
@@ -158,6 +163,12 @@ def get_dataloader_type(loss_fn):
     elif loss_fn.func == losses.bLoss:
         data_loader = dataloaders.bDataset
         mseLoss = losses.mseLoss
+    elif loss_fn.func == losses.mse_k:
+        data_loader = dataloaders.kDataset
+        mseLoss = losses.mse_k
+    elif loss_fn.func == losses.mse_Delta:
+        data_loader = dataloaders.DeltaDataset
+        mseLoss = losses.mse_Delta
     else:
         raise LookupError(f'Unknown loss function: {loss_fn}')
     return data_loader, mseLoss

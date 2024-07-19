@@ -10,11 +10,15 @@ def mseLoss(outputs, labels):
 
 def aLoss(b_pred, g_pred, k, a_label, amagmean, alpha = 1):
     se = mseLoss_aLoss(b_pred, g_pred, k, a_label, amagmean)
-    re = (1/torch.square(amagmean)*2*k*realizabilityPenalty(b_pred)).mean()
+    re = ((1/torch.square(amagmean))*torch.square(2*k)*2*realizabilityPenalty(b_pred)).mean()
     return se + alpha*re
 
 def mseLoss_aLoss(b_pred, g_pred, k, a_label, amagmean):
-    se = 1/(torch.square(amagmean)).reshape(-1,1,1) * squaredError(2*(torch.exp(g_pred[:,-1])*k).reshape(-1,1,1)*b_pred, a_label)
+    se = (1/(torch.square(amagmean))).reshape(-1,1,1) * squaredError(2*k.reshape(-1,1,1)*b_pred, a_label)
+    return se.mean()
+
+def mse_a(b_pred, g_pred, k, a_label, amagmean):
+    se = squaredError(2*k.reshape(-1,1,1)*b_pred, a_label)
     return se.mean()
 
 def bLoss(outputs, labels, alpha = 1):
@@ -32,6 +36,14 @@ def squaredError(outputs, labels):
            + (outputs[:,2,2] - labels[:,2,2])**2 \
           )/6
     return se
+
+def mse_k(k_pred, _, label):
+    se = (k_pred - label)**2 
+    return se.mean()
+
+def mse_Delta(Delta_pred, label):
+    se = (Delta_pred - label.view(-1,1))**2 
+    return se.mean()
 
 def realizabilityPenalty(b):
     re_c = realizabilityPenalty_components(b)

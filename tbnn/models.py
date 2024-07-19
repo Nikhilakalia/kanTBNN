@@ -99,7 +99,7 @@ class TBNNiv(nn.Module):
             input_dim = neurons  # For the next layer
         self.input_feature_names = input_feature_names
         self.input_feature_scaler = None
-        self.barcode = f'TBNNiii-{datestamp}'
+        self.barcode = f'TBNNiv-{datestamp}'
 
                     
     def forward(self, x, Tn):
@@ -109,6 +109,29 @@ class TBNNiv(nn.Module):
         gn = torch.cat((-torch.ones_like(gn[:,0]).view(-1,1), gn), 1)
         b_pred = torch.sum(gn[:,0:-1].view(-1,self.N,1,1)*torch.ones_like(Tn)*Tn,axis=1)
         return b_pred, gn
+    
+class KCNN(nn.Module):
+    """
+    KCNN - corrects TKE
+    """
+    def __init__(self, input_dim: int, n_hidden: int, neurons: int, activation_function, input_feature_names: list):
+        super().__init__() # does super make a difference here?
+        self.input_dim = input_dim   
+        self.output = nn.Linear(neurons,1)
+        self.activation_function = activation_function
+        self.hidden = nn.ModuleList()
+        for k in range(n_hidden):
+            self.hidden.append(nn.Linear(input_dim, neurons))
+            input_dim = neurons  # For the next layer
+        self.input_feature_names = input_feature_names
+        self.input_feature_scaler = None
+        self.barcode = f'KCNN-{datestamp}'
+     
+    def forward(self, x):
+        for layer in self.hidden:
+            x = self.activation_function(layer(x))
+        Delta = self.output(x)
+        return Delta,
     
 class clusterTBNN():
     """

@@ -1,0 +1,13 @@
+=====> WARNING: Training dataset length: 0, assuming memorization test!
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['fp_3630'], 'val_set': ['fp_3630'], 'test_set': ['fp_3630'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 168 / 168 / 168
+Memorization?: True
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+Backend TkAgg is interactive backend. Turning interactive mode on.
+  1   5.000E-03   3.7907E-02   3.7907E-02   3.7907E-02 / 3.7907E-02   
+ 10   5.000E-03   3.5027E-03   3.5027E-03   3.5027E-03 / 3.5027E-03   
+ 20   5.000E-03   5.8909E-04   5.8909E-04   5.8909E-04 / 5.8909E-04   
+ 30   5.000E-03   4.3958E-05   4.3958E-05   4.3958E-05 / 4.3958E-05   

@@ -1,0 +1,8 @@
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5'], 'val_set': ['case_0p8'], 'test_set': ['case_1p2'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 44253 / 14751 / 14751
+Memorization?: False
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   2.000E-04   1.1655E-01   1.0567E-01   1.1655E-01 / 1.0567E-01   

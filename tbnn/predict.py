@@ -7,6 +7,8 @@ import numpy as np
 def TBNN(model,df,k_name=None):
     if isinstance(model,models.clusterTBNN):
         return cluster_TBNN(model, df, k_name)
+    elif isinstance(model, models.KCNN):
+        return single_KCNN(model,df)
     else:
         return single_TBNN(model,df, k_name)
 
@@ -31,15 +33,20 @@ def cluster_TBNN(model, df):
 def single_TBNN(model, df, k_name = None):
     ds = dataloaders.aDataset(df, input_features=model.input_feature_names, scaler_X = model.input_feature_scaler, assemble_labels=False)
     b_pred, gn = model(ds.X,ds.T) #b
-    gn2 = gn[:,1:-1] #non-linear gn
+    gn2 = gn[:,1:] #non-linear gn
     T = ds.T[:,1:,:] #non-linear T
     b_perp_pred = torch.sum(gn2.view(-1,9,1,1)*torch.ones_like(T)*T,axis=1) #non-linear b
 
     if k_name is not None:
-        a_pred = 2*((torch.exp(gn[:,-1]).detach().numpy())*df[k_name].to_numpy())[:,None,None]*b_pred.detach().numpy()
-        a_perp_pred = 2*((torch.exp(gn[:,-1]).detach().numpy())*df[k_name].to_numpy())[:,None,None]*b_perp_pred.detach().numpy()
+        a_pred = 2*(df[k_name].to_numpy())[:,None,None]*b_pred.detach().numpy()
+        a_perp_pred = 2*(df[k_name].to_numpy())[:,None,None]*b_perp_pred.detach().numpy()
     else: 
         a_pred = None
         a_perp_pred = None
     # gn, b_pred, b_perp_pred returned as torch tensors, a_pred, a_perp_pred returned as numpy arrays
     return gn, b_pred, b_perp_pred, a_pred, a_perp_pred 
+
+def single_KCNN(model, df):
+    ds = dataloaders.DeltaDataset(df, input_features=model.input_feature_names, scaler_X = model.input_feature_scaler, assemble_labels=False)
+    Delta, = model(ds.X,) #b
+    return Delta,
