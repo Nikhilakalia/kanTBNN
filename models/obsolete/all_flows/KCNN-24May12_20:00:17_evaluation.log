@@ -1,0 +1,45 @@
+===================================
+=======FLAT PLATE EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5', 'squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500', 'fp_1000', 'fp_1410', 'fp_2000', 'fp_2540', 'fp_3030', 'fp_3270', 'fp_3630', 'fp_3970', 'fp_4060'], 'val_set': ['fp_3030', 'fp_1410', 'fp_4060', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200', 'case_0p8'], 'test_set': ['fp_3630', 'squareDuctAve_Re_2000', 'case_1p2'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 155605 / 42867 / 24135
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+mse_Delta:   1.1455E-01
+======= Validation =======
+mse_Delta:   1.0845E-01
+======= Testing =======
+mse_Delta:   6.9442E-02
+===================================
+======SQUARE DUCT EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5', 'squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500', 'fp_1000', 'fp_1410', 'fp_2000', 'fp_2540', 'fp_3030', 'fp_3270', 'fp_3630', 'fp_3970', 'fp_4060'], 'val_set': ['fp_3030', 'fp_1410', 'fp_4060', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200', 'case_0p8'], 'test_set': ['fp_3630', 'squareDuctAve_Re_2000', 'case_1p2'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 155605 / 42867 / 24135
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+mse_Delta:   1.1455E-01
+======= Validation =======
+mse_Delta:   1.0845E-01
+======= Testing =======
+mse_Delta:   1.8157E-02
+===================================
+=====PERIODIC HILLS EVALUATION=====
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5', 'squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500', 'fp_1000', 'fp_1410', 'fp_2000', 'fp_2540', 'fp_3030', 'fp_3270', 'fp_3630', 'fp_3970', 'fp_4060'], 'val_set': ['fp_3030', 'fp_1410', 'fp_4060', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200', 'case_0p8'], 'test_set': ['fp_3630', 'squareDuctAve_Re_2000', 'case_1p2'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 155605 / 42867 / 24135
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+mse_Delta:   1.1455E-01
+======= Validation =======
+mse_Delta:   1.0845E-01
+======= Testing =======
+mse_Delta:   2.6575E-01

@@ -1,0 +1,11 @@
+=====> WARNING: Training dataset length: 0, assuming memorization test!
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_1p2'], 'val_set': ['case_1p2'], 'test_set': ['case_1p2'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 14751 / 14751 / 14751
+Memorization?: True
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   1.000E-04   2.0275E-07   2.0275E-07   1.1813E-02 / 1.1813E-02   0.0000E+00 / 0.0000E+00   0.00% / 0.00%
+ 10   1.000E-04   1.3294E-07   1.3294E-07   8.6872E-03 / 8.6872E-03   7.6442E-13 / 7.6442E-13   0.01% / 0.01%
+ 20   1.000E-04   1.1437E-07   1.1437E-07   7.5287E-03 / 7.5287E-03   7.2350E-12 / 7.2350E-12   0.01% / 0.01%

@@ -1,0 +1,12 @@
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 110592 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   1.000E-03   8.7739E-02   6.3531E-02   8.7739E-02 / 6.3531E-02   
+ 10   1.000E-03   7.1852E-02   5.2112E-02   7.1852E-02 / 5.2112E-02   
+ 20   1.000E-03   5.9211E-02   4.3650E-02   5.9211E-02 / 4.3650E-02   
+ 30   1.000E-03   5.3029E-02   4.1629E-02   5.3029E-02 / 4.1629E-02   
+ 40   1.000E-03   5.0202E-02   4.0257E-02   5.0202E-02 / 4.0257E-02   

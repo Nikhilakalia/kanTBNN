@@ -1,0 +1,30 @@
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 110592 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   5.000E-04   3.8828E-03   3.2683E-03   3.8828E-03 / 3.2683E-03   
+ 10   5.000E-04   1.0394E-03   8.5914E-04   1.0394E-03 / 8.5914E-04   
+ 20   5.000E-04   8.3309E-04   6.4088E-04   8.3309E-04 / 6.4088E-04   
+ 30   5.000E-04   7.3342E-04   7.6520E-04   7.3342E-04 / 7.6520E-04   
+ 40   5.000E-04   6.3538E-04   7.0971E-04   6.3538E-04 / 7.0971E-04   
+ 50   5.000E-04   6.5517E-04   7.4450E-04   6.5517E-04 / 7.4450E-04   
+ 60   5.000E-04   5.7575E-04   7.1277E-04   5.7575E-04 / 7.1277E-04   
+ 70   5.000E-04   5.4150E-04   6.6344E-04   5.4150E-04 / 6.6344E-04   
+ 80   5.000E-04   5.5153E-04   6.8771E-04   5.5153E-04 / 6.8771E-04   
+ 90   5.000E-04   5.3948E-04   6.8528E-04   5.3948E-04 / 6.8528E-04   
+100   5.000E-04   5.4746E-04   6.5690E-04   5.4746E-04 / 6.5690E-04   
+110   5.000E-04   5.3507E-04   7.2132E-04   5.3507E-04 / 7.2132E-04   
+120   5.000E-04   5.1932E-04   6.5851E-04   5.1932E-04 / 6.5851E-04   
+130   5.000E-04   5.1844E-04   6.7103E-04   5.1844E-04 / 6.7103E-04   
+140   5.000E-04   6.2495E-04   6.7745E-04   6.2495E-04 / 6.7745E-04   
+150   5.000E-04   5.1425E-04   6.4363E-04   5.1425E-04 / 6.4363E-04   
+160   5.000E-04   6.3133E-04   8.6118E-04   6.3133E-04 / 8.6118E-04   
+170   5.000E-04   5.4385E-04   6.5072E-04   5.4385E-04 / 6.5072E-04   
+180   5.000E-04   5.0579E-04   7.0201E-04   5.0579E-04 / 7.0201E-04   
+190   5.000E-04   5.0920E-04   6.1416E-04   5.0920E-04 / 6.1416E-04   
+200   5.000E-04   5.0493E-04   6.3892E-04   5.0493E-04 / 6.3892E-04   
+===============================================================================================================
+Saved model to models/duct_only_norealiz/TBNNiii-24May29_10:22:49.pickle

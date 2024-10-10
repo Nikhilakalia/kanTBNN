@@ -77,12 +77,18 @@ class aDataset(bDataset):
     def __init__(self, df, input_features, scaler_X=None, Perp=True, assemble_labels=True):
         super().__init__(df, input_features, scaler_X, Perp, assemble_labels)
         if assemble_labels:
-            self.khat = torch.from_numpy(np.float32(self.assemble_khat(df))).to(device)
+            self.k = torch.from_numpy(np.float32(self.assemble_k(df))).to(device)
             self.a = torch.from_numpy(np.float32(self.assemble_a(df))).to(device)
+            self.amagmean = torch.from_numpy(np.float32(self.assemble_amagmean(df))).to(device)
 
-    def assemble_khat(self,df):
-        khat = df['DNS_khat']
-        return khat
+    def assemble_k(self,df):
+        k = df['DNS_k']
+        return k
+
+    def assemble_amagmean(self,df):
+        amagmean = df['DNS_amagmean']
+        return amagmean 
+
     
     def assemble_a(self,df):
         a = np.empty((self.__len__(),3,3))
@@ -99,8 +105,50 @@ class aDataset(bDataset):
     
     def __getitem__(self, idx):
         X = self.X[idx]
-        b = self.b[idx]
-        khat = self.khat[idx]
+        a = self.a[idx]
+        amagmean = self.amagmean[idx]
+        k = self.k[idx]
         Tn = self.T[idx]
-        return (X, Tn), (khat, b)
+        return (X, Tn), (k, a, amagmean)
+    
+
+class DeltaDataset(bDataset):
+    def __init__(self, df, input_features, scaler_X=None, Perp=True, assemble_labels=True, filter=True):
+        df.replace([np.inf, -np.inf], np.nan, inplace=True)
+        df = df.dropna()
+        super().__init__(df, input_features, scaler_X, Perp, assemble_labels)
+
+        if assemble_labels:
+            self.Delta = torch.from_numpy(np.float32(self.assemble_Delta(df))).to(device)
+
+    def assemble_Delta(self,df):
+        Delta = df['Delta']
+        return Delta
+    
+    def __getitem__(self, idx):
+        X = self.X[idx]
+        Delta = self.Delta[idx]
+        return (X, ), (Delta,)
+    
+
+class kDataset(bDataset):
+    def __init__(self, df, input_features, scaler_X=None, Perp=True, assemble_labels=True):
+        super().__init__(df, input_features, scaler_X, Perp, assemble_labels)
+        self.k_RANS = torch.from_numpy(np.float32(self.assemble_k_RANS(df))).to(device)
+        if assemble_labels:
+            self.k_DNS = torch.from_numpy(np.float32(self.assemble_k_DNS(df))).to(device)
+
+    def assemble_k_RANS(self,df):
+        k = df['komegasst_k']
+        return k
+    
+    def assemble_k_DNS(self,df):
+        k = df['DNS_k']
+        return k
+    
+    def __getitem__(self, idx):
+        X = self.X[idx]
+        k_RANS = self.k_RANS[idx]
+        k_DNS = self.k_DNS[idx]
+        return (X, k_RANS), (k_DNS,)
     

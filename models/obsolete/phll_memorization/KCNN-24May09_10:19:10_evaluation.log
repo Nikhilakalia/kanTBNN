@@ -1,0 +1,16 @@
+===================================
+=====PERIODIC HILLS EVALUATION=====
+===================================
+=====> WARNING: Training dataset length: 0, assuming memorization test!
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_1p2'], 'val_set': ['case_1p2'], 'test_set': ['case_1p2'], 'data_loader': <class 'tbnn.dataloaders.DeltaDataset'>}
+Train/Valid/Test points: 14751 / 14751 / 14751
+Memorization?: True
+Cluster training?: False
+Final model performance:
+======= Training =======
+mse_Delta:   2.2348E-02
+======= Validation =======
+mse_Delta:   2.2348E-02
+======= Testing =======
+mse_Delta:   2.2348E-02

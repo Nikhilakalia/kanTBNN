@@ -1,0 +1,29 @@
+===================================
+=====PERIODIC HILLS EVALUATION=====
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5'], 'val_set': ['case_0p8'], 'test_set': ['case_1p2'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 44253 / 14751 / 14751
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   5.6301E-03
+mse_b:   1.1906E-02
+realzLoss: 1.0124E-05
+%unrealiz: 1.4146%
+mse_a:   3.5326E-13
+======= Validation =======
+aLoss:   1.1830E-02
+mse_b:   1.1917E-02
+realzLoss: 3.1427E-05
+%unrealiz: 1.3830%
+mse_a:   6.1551E-13
+======= Testing =======
+aLoss:   6.8084E-03
+mse_b:   1.1787E-02
+realzLoss: 8.7856E-06
+%unrealiz: 1.7151%
+mse_a:   3.8744E-13
+[dataFoam] Writing nut_L to file /home/ryley/WDK/ML/scratch/injection/case_1p2_phll_only/0/nut_L
+[dataFoam] Writing aperp to file /home/ryley/WDK/ML/scratch/injection/case_1p2_phll_only/0/aperp

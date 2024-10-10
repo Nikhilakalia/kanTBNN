@@ -1,0 +1,30 @@
+===================================
+======SQUARE DUCT EVALUATION=======
+===================================
+=====> WARNING: Training dataset length: 0, assuming memorization test!
+========== Dataset info ==========
+Dataset params: {'file': '/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_2000'], 'val_set': ['squareDuctAve_Re_2000'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 9216 / 9216 / 9216
+Memorization?: True
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   1.3002E-08
+mse_b:   3.5228E-02
+realzLoss: 5.6296E-09
+%unrealiz: 0.9874%
+mse_a (khat):   1.2985E-08
+======= Validation =======
+aLoss:   1.3002E-08
+mse_b:   3.5228E-02
+realzLoss: 5.6296E-09
+%unrealiz: 0.9874%
+mse_a (khat):   1.2985E-08
+======= Testing =======
+aLoss:   1.3002E-08
+mse_b:   3.5228E-02
+realzLoss: 5.6296E-09
+%unrealiz: 0.9874%
+mse_a (khat):   1.2985E-08
+[dataFoam] Writing nut_L to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_duct_memorization/0/nut_L
+[dataFoam] Writing aperp to file /home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_duct_memorization/0/aperp
