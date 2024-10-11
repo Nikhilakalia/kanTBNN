@@ -1,7 +1,5 @@
 import torch.nn as nn
 import sys
-sys.path.append('/home/nikki/kan')
-sys.path.append('/home/nikki/kan/tbnn')
 import tbnn.losses as losses
 import tbnn
 from functools import partial
