@@ -4,3 +4,6 @@ def get_device():
     device = torch.device("cpu")
     print(f'Device: {device}')
     return device
+
+#dev = get_device()
+#print(dev)

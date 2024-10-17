@@ -6,6 +6,8 @@ import tbnn.devices as devices
 device = devices.get_device()
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
+#print(device) #sanity check if i am on gpu or not 
+
 class bDataset(Dataset):
     def __init__(self, df, input_features, scaler_X=None, Perp=True, assemble_labels=True):
         self.Perp = Perp

@@ -198,7 +198,7 @@ def square_duct(model,config):
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
     #Select only the square duct test case
-    df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'squareDuctAve_Re_2000'].copy()
 
     final_model(model,[df_train, df_valid, df_test],config)
@@ -270,7 +270,7 @@ def square_duct_k(model,config):
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
     #Select only the square duct test case
-    df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'squareDuctAve_Re_2000'].copy()
 
     final_model_k(model,[df_train, df_valid, df_test],config)
@@ -508,7 +508,7 @@ def flatplate_k(model,config):
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
     #Select only the periodic hills test case
-    df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'fp_3630'].copy()
 
     final_model_k(model,[df_train, df_valid, df_test],config)
