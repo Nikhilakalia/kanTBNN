@@ -1,0 +1,27 @@
+===================================
+=======FLAT PLATE EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv', 'Cases': ['fp_1000', 'fp_1410', 'fp_2000', 'fp_2540', 'fp_3030', 'fp_3270', 'fp_3630', 'fp_3970', 'fp_4060'], 'val_set': ['fp_3030', 'fp_1410', 'fp_4060'], 'test_set': ['fp_3630'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 760 / 468 / 168
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   1.5161E-04
+mse_b:   1.1198E+02
+realzLoss: 3.1809E-08
+%unrealiz: 1.0526%
+mse_a:   7.4747E-02
+======= Validation =======
+aLoss:   2.4987E-04
+mse_b:   1.0625E+02
+realzLoss: 8.4396E-07
+%unrealiz: 2.7778%
+mse_a:   1.1768E-01
+======= Testing =======
+aLoss:   1.3480E-03
+mse_b:   9.7769E+01
+realzLoss: 2.1188E-05
+%unrealiz: 6.5476%
+mse_a:   5.6609E-01

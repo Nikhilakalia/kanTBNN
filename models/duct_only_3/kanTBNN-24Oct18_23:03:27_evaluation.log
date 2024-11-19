@@ -1,0 +1,27 @@
+===================================
+======SQUARE DUCT EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_3200'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 55296 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   1.3998E-03
+mse_b:   5.9848E-02
+realzLoss: 2.1536E-05
+%unrealiz: 2.3817%
+mse_a:   7.4301E-09
+======= Validation =======
+aLoss:   3.6739E-01
+mse_b:   8.7098E-02
+realzLoss: 8.9501E-03
+%unrealiz: 17.3683%
+mse_a:   5.1008E-08
+======= Testing =======
+aLoss:   9.8088E-01
+mse_b:   1.0129E-01
+realzLoss: 2.0266E-02
+%unrealiz: 13.9648%
+mse_a:   7.3309E-08

@@ -1,0 +1,11 @@
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv', 'Cases': ['fp_1000', 'fp_1410', 'fp_2000', 'fp_2540', 'fp_3030', 'fp_3270', 'fp_3630', 'fp_3970', 'fp_4060'], 'val_set': ['fp_3030', 'fp_1410', 'fp_4060'], 'test_set': ['fp_3630'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 760 / 468 / 168
+Memorization?: False
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   6.793E-04   1.8076E-01   1.7907E-01   1.8076E-01 / 1.7907E-01   
+ 10   6.793E-04   6.2482E-02   6.0566E-02   6.2481E-02 / 6.0566E-02   
+ 20   6.793E-04   2.3019E-02   2.1133E-02   2.2862E-02 / 2.1113E-02   
+ 30   6.793E-04   1.5844E-02   1.4107E-02   1.5710E-02 / 1.4091E-02   

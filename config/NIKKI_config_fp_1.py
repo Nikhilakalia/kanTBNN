@@ -20,7 +20,7 @@ dataset_params = {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv',
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss),
-                    'max_epochs': 5000,
+                    'max_epochs': 6000,
                     'learning_rate': 0.002,
                     'learning_rate_decay': 1.0,
                     'batch_size': 64,
@@ -31,7 +31,7 @@ training_params = { 'loss_fn': partial(losses.aLoss),
 model_params = {
     'model_type': tbnn.models.kanTBNN,
     'width': [6,5,10], 
-    'grid': 5,
+    'grid': 3,
      'k': 3,
     'input_features':[
 'komegasst_I1_1',

@@ -105,6 +105,10 @@ def plot_loss_curve(loss_vals, val_loss_vals, filename):
     ax.plot(loss_vals,'-',color='b',label='Training')
     ax.plot(val_loss_vals,'--',color='r',label='Validation')
     ax.semilogy()
+    # Adding labels and title
+    ax.set_xlabel('Epochs')  # X-axis label
+    ax.set_ylabel(r'$\mathcal{L}$')    # Y-axis label
+    #ax.set_title('Training and Validation Loss vs Epochs')  # Title
     ax.legend(loc='upper right')
     fig.tight_layout()
     fig.savefig(filename,dpi=300)
@@ -177,5 +181,6 @@ def save_model(model, filename):
     torch.save(model.state_dict(), filename)
     print(f'Saved model to {filename}')
     return 
+
 
 
