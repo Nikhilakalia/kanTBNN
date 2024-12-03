@@ -4,8 +4,8 @@ import tbnn
 from functools import partial
 import os
 
-run_name = 'kan_experiment_148_opt'
-results_dir = '/home/nikki/kan/kanTBNN/models/multi_run/kan_experiment_148_opt'
+run_name = 'kan_experiment_148_opt_test'
+results_dir = '/home/nikki/kan/kanTBNN/models/multi_run/kan_experiment_148_opt_test'
 evaluation = tbnn.evaluate.flatplate
 
 dataset_params = {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv', 'Cases': ['fp_1000', 'fp_1410', 'fp_2000', 'fp_2540', 'fp_3030', 'fp_3270', 'fp_3630', 'fp_3970', 'fp_4060'], 'val_set': ['fp_3030', 'fp_1410', 'fp_4060'], 'test_set': ['fp_3630']}
@@ -21,10 +21,27 @@ training_params = {
 
 model_params = {
     'model_type': tbnn.models.kanTBNN,
-    'width': [6, 9,9,9, 10],
+    'width': [16, 9, 10],
     'grid': 8,
     'k': 3,
-    'input_features': ['komegasst_I1_1', 'komegasst_I1_7', 'komegasst_I1_16', 'komegasst_I1_10', 'komegasst_I1_12', 'komegasst_I1_3'],
+        'input_features':[
+  'komegasst_q6',
+  'komegasst_q5',
+  'komegasst_q8',
+  'komegasst_I1_16',
+  'komegasst_I1_7',
+  'komegasst_I1_3',
+  'komegasst_I2_6',
+  'komegasst_q3',
+  'komegasst_I2_3',
+  'komegasst_I1_4',
+  'komegasst_I2_7',
+  'komegasst_I1_35',
+  'komegasst_q2',
+  'komegasst_I1_1',
+  'komegasst_q4',
+  'komegasst_I2_8',
+    ],
 }
 
 dataset_params['data_loader'] = tbnn.training_utils.get_dataloader_type(training_params['loss_fn'])[0]

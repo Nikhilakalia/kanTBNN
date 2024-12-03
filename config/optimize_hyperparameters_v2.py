@@ -119,7 +119,7 @@ def run_experiment_and_get_mse(config, experiment_id, feature_tracker):
 
 # Objective function for Optuna
 def objective(trial, feature_tracker):
-    experiment_id = 161 + trial.number  # Start from 161 onward for new trials
+    experiment_id = 176 + trial.number  # Start from 161 onward for new trials
     middle_width = trial.suggest_int("middle_width", 8, 10)
     grid = trial.suggest_int("grid", 8, 10)
     learning_rate = trial.suggest_float("learning_rate", 0.002, 0.005)
