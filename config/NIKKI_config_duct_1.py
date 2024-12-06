@@ -44,7 +44,7 @@ training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
 
 model_params = {
     'model_type': tbnn.models.kanTBNN,
-    'width': [13,10,10,10,10], #change the width
+    'width': [16,10,10,10,10], #change the width
     'grid': 9, #can also change the grid for the thickness of the network 
      'k': 3,
     'input_features':[
