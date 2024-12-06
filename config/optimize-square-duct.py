@@ -14,9 +14,22 @@ venv_activate = "/home/niki/kan/kan_project/bin/activate"  # Path to virtual env
 
 # Input features for the square duct case
 all_features = [
-    'komegasst_I1_1', 'komegasst_I1_3', 'komegasst_I1_4', 'komegasst_I1_5', 
-    'komegasst_I1_16', 'komegasst_I1_7', 'komegasst_I1_9', 'komegasst_I1_10', 
-    'komegasst_q5', 'komegasst_q6'
+  'komegasst_q6',
+  'komegasst_q5',
+  'komegasst_q8',
+  'komegasst_I1_16',
+  'komegasst_I1_7',
+  'komegasst_I1_3',
+  'komegasst_I2_6',
+  'komegasst_q3',
+  'komegasst_I2_3',
+  'komegasst_I1_4',
+  'komegasst_I2_7',
+  'komegasst_I1_35',
+  'komegasst_q2',
+  'komegasst_I1_1',
+  'komegasst_q4',
+  'komegasst_I2_8',
 ]
 
 # Check the total number of features
@@ -94,10 +107,10 @@ def run_experiment_and_get_mse(config, experiment_id):
 # Objective function for Optuna
 def objective(trial):
     experiment_id = trial.number + 1  # Use sequential numbering for IDs
-    width_1 = trial.suggest_int("width_1", 8, 16)
-    width_2 = trial.suggest_int("width_2", 8, 16)
-    width_3 = trial.suggest_int("width_3", 8, 16)
-    width_4 = trial.suggest_int("width_4", 8, 16)
+    width_1 = trial.suggest_int("width_1", 8, 15)
+    width_2 = trial.suggest_int("width_2", 8, 15)
+    width_3 = trial.suggest_int("width_3", 8, 15)
+    width_4 = trial.suggest_int("width_4", 8, 15)
     learning_rate = trial.suggest_float("learning_rate", 0.0001, 0.001)
 
     config = {
@@ -116,7 +129,7 @@ def objective(trial):
             "test_set": ['squareDuctAve_Re_2000']
         },
         "training_params": {
-            "max_epochs": 1000,
+            "max_epochs": 500,
             "learning_rate": learning_rate,
             "learning_rate_decay": 1.0,
             "batch_size": 32,
@@ -125,7 +138,7 @@ def objective(trial):
         },
         "model_params": {
             "model_type": "tbnn.models.kanTBNN",
-            "width": [13, width_1, width_2, width_3, width_4],
+            "width": [16, width_1, width_2, width_3, width_4],
             "grid": 9,
             "k": 3,
             "input_features": all_features,
