@@ -11,7 +11,7 @@ run_name = 'duct_only'
 results_dir = os.path.join('models',run_name)
 evaluation = tbnn.evaluate.square_duct
 
-dataset_params = {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv',
+dataset_params = {'file': '/scratch/niki/kan/data/turbulence_dataset_clean.csv',
                   'Cases': ['squareDuctAve_Re_1100',
        'squareDuctAve_Re_1150',
        'squareDuctAve_Re_1250',
@@ -34,18 +34,18 @@ dataset_params = {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv',
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
-                    'max_epochs': 10,
+                    'max_epochs': 500,
                     'learning_rate': 0.0005,
                     'learning_rate_decay': 1.0,
                     'batch_size': 32,
-                    'early_stopping_patience': 500,
+                    'early_stopping_patience': 100,
                     'early_stopping_min_delta': 1E-8,
                 }
 
 model_params = {
     'model_type': tbnn.models.kanTBNN,
-    'width': [16,10,10,10,10], #change the width
-    'grid': 9, #can also change the grid for the thickness of the network 
+    'width': [16,5,5,5,5,10], #change the width - this changes the depth 
+    'grid': 10, #can also change the grid - the number of control points
      'k': 3,
     'input_features':[
   'komegasst_q6',

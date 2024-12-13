@@ -11,7 +11,7 @@ parser.add_argument("config_file")
 args = parser.parse_args()
 
 import sys
-fullpath = '/home/nikki/kan/kanTBNN/config'
+fullpath = '/scratch/niki/kan/kanTBNN/config'
 sys.path.append(fullpath)
 
 config = __import__(args.config_file)
