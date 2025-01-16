@@ -198,7 +198,7 @@ def square_duct(model,config):
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
     #Select only the square duct test case
-    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'squareDuctAve_Re_2000'].copy()
 
     final_model(model,[df_train, df_valid, df_test],config)
@@ -233,12 +233,12 @@ def square_duct(model,config):
     fig.savefig(os.path.join(config.results_dir,f'{model.barcode}_duct_a_test.png'),dpi=300)
     df_test.to_csv(os.path.join(config.results_dir,f'{model.barcode}_df_test_tbnn_duct.csv'))
 
-    df_test = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_raw_squareDuctFull_Re_2000.csv')
+    df_test = pd.read_csv('/home/nikhila/WDC/kan/dataset/turbulence_dataset_raw_squareDuctFull_Re_2000.csv')
     gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,df_test, k_name='DNS_k')
     nut_L = df_test['komegasst_nut'].to_numpy()
 
     endtime = '0'
-    foamdir = os.path.join(f'/home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_{config.run_name}')
+    foamdir = os.path.join(f'/home/nikhila/WDC/kan/configcases/squareDuct_Re_2000_{config.run_name}')
     writeFoam_nut_L_DUCT(os.path.join(foamdir,endtime,'nut_L'),nut_L)
     writeFoam_ap_DUCT(os.path.join(foamdir,endtime,'aperp'),a_perp_pred)
 
@@ -249,7 +249,7 @@ def square_duct_injection(model_TBNN, model_KCNN,config):
     #data_loader = config.dataset_params['data_loader']
     #df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
-    df_test = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_raw_squareDuctFull_Re_2000.csv')
+    df_test = pd.read_csv('/home/nikhila/WDC/kan/dataset/turbulence_dataset_raw_squareDuctFull_Re_2000.csv')
     gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model_TBNN,df_test, k_name='DNS_k')
     Delta, = predict.TBNN(model_KCNN,df_test, k_name = 'DNS_k')
 
@@ -258,7 +258,7 @@ def square_duct_injection(model_TBNN, model_KCNN,config):
 
 
     endtime = '0'
-    foamdir = os.path.join(f'/home/ryley/WDK/ML/scratch/injection/squareDuct_Re_2000_{config.run_name}')
+    foamdir = os.path.join(f'/home/nikhila/WDC/kan/configcases/squareDuct_Re_2000_{config.run_name}')
     writeFoam_nut_L_DUCT(os.path.join(foamdir,endtime,'nut_L'),nut_L)
     writeFoam_ap_DUCT(os.path.join(foamdir,endtime,'aperp'),a_perp_pred)
 
@@ -270,7 +270,7 @@ def square_duct_k(model,config):
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
     #Select only the square duct test case
-    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'squareDuctAve_Re_2000'].copy()
 
     final_model_k(model,[df_train, df_valid, df_test],config)
@@ -309,7 +309,7 @@ def flatplate(model, config):
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params, print_info=True)
 
     # Select only the periodic hills test case
-    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'fp_3630'].copy()
 
     final_model(model, [df_train, df_valid, df_test], config)

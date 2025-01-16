@@ -10,8 +10,14 @@ parser = argparse.ArgumentParser()
 parser.add_argument("config_file")
 args = parser.parse_args()
 
+import torch
+
+# Set the number of threads to the maximum available on your machine
+torch.set_num_threads(64)  # Replace 64 with the number of threads available (based on `lscpu`)
+print(f"Using {torch.get_num_threads()} CPU threads.")
+
 import sys
-fullpath = '/home/nikki/kan/kanTBNN/config'
+fullpath = '/home/nikhila/WDC/kan/kanTBNN/config'
 sys.path.append(fullpath)
 
 config = __import__(args.config_file)
