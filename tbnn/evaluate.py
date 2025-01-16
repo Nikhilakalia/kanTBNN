@@ -26,7 +26,7 @@ def final_model(model, dataframes, config):
     for i, dfi in enumerate(dataframes):
         g_pred, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,dfi)
         ds = config.dataset_params['data_loader'](dfi, input_features=None)
-        for _,labels in DataLoader(ds , shuffle=False, batch_size=ds.__len__()):
+        for _,labels in DataLoader(ds , shuffle=False, batch_size=ds.__len__(), num_workers=12):
             print(f'======= {names[i]} =======')
             print(f'{config.training_params["loss_fn"].func.__name__}:   {loss_fn(b_pred, g_pred, *labels):.4E}')
             print(f'mse_b:   {losses.mseLoss(b_pred, labels[-2]).item():.4E}')
@@ -48,7 +48,7 @@ def final_model_k(model, dataframes, config):
     for i, dfi in enumerate(dataframes):
         ds = config.dataset_params['data_loader'](dfi, input_features=None)
         outputs = predict.TBNN(model,dfi)
-        for _,labels in DataLoader(ds , shuffle=False, batch_size=ds.__len__()):
+        for _,labels in DataLoader(ds , shuffle=False, batch_size=ds.__len__(), num_workers=12):
             print(f'======= {names[i]} =======')
             print(f'{config.training_params["loss_fn"].func.__name__}:   {loss_fn(*outputs, *labels):.4E}')
 
@@ -56,11 +56,11 @@ def intermediate_model(model, datasets, loss_fn):
     """
     Return intermediate train/valid loss values during training.
     """
-    for inputs,labels in DataLoader(datasets[0] , shuffle=False, batch_size=datasets[0].__len__()):
+    for inputs,labels in DataLoader(datasets[0] , shuffle=False, batch_size=datasets[0].__len__(), num_workers=12):
         outputs = model(*inputs)
         loss_t = loss_fn(*outputs, *labels).item()
 
-    for inputs,labels in DataLoader(datasets[1] , shuffle=False, batch_size=datasets[1].__len__()):
+    for inputs,labels in DataLoader(datasets[1] , shuffle=False, batch_size=datasets[1].__len__(), num_workers=12):
         outputs = model(*inputs)
         loss_v = loss_fn(*outputs, *labels).item()
 
@@ -71,12 +71,12 @@ def print_intermediate_info(model, datasets, loss_fn, mseLoss, epoch, lr):
     Add a line to the learning loss table.
     """
     loss_t, loss_v = intermediate_model(model, datasets, loss_fn)
-    for inputs,labels in DataLoader(datasets[0] , shuffle=False, batch_size=datasets[0].__len__()):
+    for inputs,labels in DataLoader(datasets[0] , shuffle=False, batch_size=datasets[0].__len__(), num_workers=12):
         outputs = model(*inputs)
         mse_t = mseLoss(*outputs, *labels).item()
         #rl_t = losses.realizabilityLoss(outputs[0]).item() 
         
-    for inputs,labels in DataLoader(datasets[1] , shuffle=False, batch_size=datasets[1].__len__()):
+    for inputs,labels in DataLoader(datasets[1] , shuffle=False, batch_size=datasets[1].__len__(), num_workers=12):
         outputs = model(*inputs)
         mse_v = mseLoss(*outputs, *labels).item()
         #rl_v = losses.realizabilityLoss(outputs[0]).item()  

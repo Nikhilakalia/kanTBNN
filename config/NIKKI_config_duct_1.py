@@ -13,19 +13,19 @@ evaluation = tbnn.evaluate.square_duct
 
 dataset_params = {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv',
                   'Cases': ['squareDuctAve_Re_1100',
-       'squareDuctAve_Re_1150',
-       'squareDuctAve_Re_1250',
-       'squareDuctAve_Re_1300',
-       'squareDuctAve_Re_1350',
-       'squareDuctAve_Re_1400',
-       'squareDuctAve_Re_1500',
-       'squareDuctAve_Re_1600',
-       'squareDuctAve_Re_1800',
-       'squareDuctAve_Re_2000',
-       'squareDuctAve_Re_2205',
-       'squareDuctAve_Re_2400',
-       'squareDuctAve_Re_2600',
-       'squareDuctAve_Re_2900',
+       #'squareDuctAve_Re_1150',
+       #'squareDuctAve_Re_1250',
+       #'squareDuctAve_Re_1300',
+       #'squareDuctAve_Re_1350',
+       #'squareDuctAve_Re_1400',
+       #'squareDuctAve_Re_1500',
+       #'squareDuctAve_Re_1600',
+       #'squareDuctAve_Re_1800',
+       #'squareDuctAve_Re_2000',
+       #'squareDuctAve_Re_2205',
+       #'squareDuctAve_Re_2400',
+       #'squareDuctAve_Re_2600',
+       #'squareDuctAve_Re_2900',
        'squareDuctAve_Re_3200',
        'squareDuctAve_Re_3500'],
                   'val_set': ['squareDuctAve_Re_1300','squareDuctAve_Re_1800','squareDuctAve_Re_3200'],#['squareDuctQuad1_Re_1300','squareDuctQuad1_Re_1800','squareDuctQuad1_Re_3200'],
@@ -34,7 +34,7 @@ dataset_params = {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv',
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
-                    'max_epochs': 10,
+                    'max_epochs': 100,
                     'learning_rate': 0.0005,
                     'learning_rate_decay': 1.0,
                     'batch_size': 32,
@@ -44,8 +44,8 @@ training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
 
 model_params = {
     'model_type': tbnn.models.kanTBNN,
-    'width': [16,10,10,10,10], #change the width
-    'grid': 9, #can also change the grid for the thickness of the network 
+    'width': [16,3,10], #change the width
+    'grid': 5, #can also change the grid for the thickness of the network 
      'k': 3,
     'input_features':[
   'komegasst_q6',

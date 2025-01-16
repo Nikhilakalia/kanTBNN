@@ -53,7 +53,7 @@ def early_stopped_training_run(model, df_train, df_valid, training_params, resul
     tDs = data_loader(df_train, input_features=model.input_feature_names)
     model.input_feature_scaler = tDs.scaler_X
     vDs = data_loader(df_valid, input_features=model.input_feature_names, scaler_X = model.input_feature_scaler)
-    loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'])
+    loader = DataLoader(tDs, shuffle=True, batch_size=training_params['batch_size'],num_workers=12)
     optimizer = optim.Adam(model.parameters(), lr=training_params['learning_rate'], amsgrad=False)
     #optimizer = optim.SGD(model.parameters(), lr=training_params['learning_rate'], nesterov=True, momentum=0.9)
 
