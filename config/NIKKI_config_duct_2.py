@@ -37,7 +37,7 @@ training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
                     'max_epochs': 500,
                     'learning_rate': 0.0005,
                     'learning_rate_decay': 1.0,
-                    'batch_size': 32,
+                    'batch_size': 64,
                     'early_stopping_patience': 100,
                     'early_stopping_min_delta': 1E-8,
                 }

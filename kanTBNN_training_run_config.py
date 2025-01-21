@@ -35,7 +35,7 @@ model = model_params['model_type'](
             seed = 7,
             input_feature_names=model_params['input_features']
 ).to(device)
-
+model.speed()
 sys.stdout = open(os.path.join(results_dir,f'{model.barcode}.log'),'w')
 
 df, df_train, df_valid, df_test = get_dataframes(dataset_params,print_info=True)
