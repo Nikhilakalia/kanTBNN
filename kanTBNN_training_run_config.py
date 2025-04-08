@@ -9,6 +9,11 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("config_file")
 args = parser.parse_args()
+import torch
+
+# Set the number of threads for PyTorch
+torch.set_num_threads(torch.get_num_threads())  # Automatically uses all CPUs
+print(f"Using {torch.get_num_threads()} threads for PyTorch.")
 
 import sys
 fullpath = '/home/nikki/kan/kanTBNN/config'
@@ -22,6 +27,7 @@ dataset_params = config.dataset_params
 training_params = config.training_params
 model_params = config.model_params
 
+
 model = model_params['model_type'](
             width = model_params['width'],
             grid = model_params['grid'],
@@ -29,6 +35,7 @@ model = model_params['model_type'](
             seed = 7,
             input_feature_names=model_params['input_features']
 ).to(device)
+model.speed()
 
 sys.stdout = open(os.path.join(results_dir,f'{model.barcode}.log'),'w')
 
@@ -41,6 +48,7 @@ model, loss_vals, val_loss_vals  = early_stopped_training_run(model = model,
                                                                    results_dir = results_dir
                                                                    )
 model.eval()
+
 save_model(model, os.path.join(results_dir,f'{model.barcode}.pickle'))
 
 plot_loss_curve(loss_vals, 
@@ -49,7 +57,11 @@ plot_loss_curve(loss_vals,
                              f'{model.barcode}_losses.png')
                 )
 
-evaluate_model_with_config(model.barcode,config)
+
+# i am commenting this out but i will eventually need to do this. 
+#evaluate_model_with_config(model.barcode,config)
+
+
 #evaluate.periodic_hills(model, config)
 #if config.evaluation is not None:
 #    config.evaluation(model, config)

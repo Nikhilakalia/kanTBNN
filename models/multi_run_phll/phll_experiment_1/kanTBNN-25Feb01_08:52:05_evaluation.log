@@ -1,0 +1,28 @@
+===================================
+=====PERIODIC HILLS EVALUATION=====
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikki/kan/data/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5'], 'val_set': ['case_0p8'], 'test_set': ['case_1p2'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 44253 / 14751 / 14751
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   1.4387E-02
+mse_b:   1.0191E-02
+realzLoss: 5.4244E-09
+%unrealiz: 0.0746%
+mse_a:   2.1267E-12
+======= Validation =======
+aLoss:   2.0041E-02
+mse_b:   9.9435E-03
+realzLoss: 6.5253E-07
+%unrealiz: 0.1695%
+mse_a:   2.4519E-12
+======= Testing =======
+aLoss:   2.0063E-02
+mse_b:   1.0213E-02
+realzLoss: 1.3413E-06
+%unrealiz: 1.0101%
+mse_a:   1.8197E-12
+[dataFoam] Writing nut_L to file /home/nikki/kan/foam/scratch/injection/case_1p2_phll_experiment_1/0/nut_L

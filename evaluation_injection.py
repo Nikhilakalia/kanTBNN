@@ -28,7 +28,7 @@ def evaluate_model_with_config(config):
             config.evaluation(model_TBNN, model_KCNN, config)
 
 if __name__ == "__main__":
-    fullpath = '/home/ryley/WDK/ML/code/tbnn/config'
+    fullpath = '/home/ryley/WDK/ML/code/tbnn/config' # I am not using this currently, but will have to eventually shift to it
     sys.path.append(fullpath)
     parser = argparse.ArgumentParser()
     parser.add_argument("config_file")

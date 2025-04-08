@@ -96,7 +96,7 @@ def periodic_hills(model, config):
     data_loader = config.dataset_params['data_loader']
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
-    df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'case_1p2'].copy()
     final_model(model,[df_train, df_valid, df_test],config)
     gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model,df_test,k_name='DNS_k')
@@ -131,7 +131,7 @@ def periodic_hills(model, config):
     fig.savefig(os.path.join(config.results_dir,f'{model.barcode}_phll_a_test.png'),dpi=300)
         
     endtime = '0'
-    foamdir = os.path.join(f'/home/ryley/WDK/ML/scratch/injection/case_1p2_{config.run_name}')
+    foamdir = os.path.join(f'/home/nikki/kan/foam/scratch/injection/case_1p2_{config.run_name}')
     writeFoam_nut_L_PHLL(os.path.join(foamdir,endtime,'nut_L'),nut_L)
     writeFoam_ap_PHLL(os.path.join(foamdir,endtime,'aperp'),a_perp_pred)
 
@@ -142,7 +142,7 @@ def periodic_hills_k(model, config):
     data_loader = config.dataset_params['data_loader']
     df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
-    df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'case_1p2'].copy()
     final_model_k(model,[df_train, df_valid, df_test],config)
     Delta, = predict.TBNN(model,df_test, k_name = 'DNS_k')
@@ -177,7 +177,7 @@ def periodic_hills_injection(model_TBNN, model_KCNN,config):
     #data_loader = config.dataset_params['data_loader']
     #df, df_train, df_valid, df_test = training_utils.get_dataframes(config.dataset_params,print_info=True)
 
-    df = pd.read_csv('/home/ryley/WDK/ML/dataset/turbulence_dataset_clean.csv')
+    df = pd.read_csv('/home/nikki/kan/data/turbulence_dataset_clean.csv')
     df_test = df[df['Case'] == 'case_1p2'].copy()
     gn, b_pred, b_perp_pred, a_pred, a_perp_pred = predict.TBNN(model_TBNN,df_test, k_name='DNS_k')
     Delta, = predict.TBNN(model_KCNN,df_test, k_name = 'DNS_k')
