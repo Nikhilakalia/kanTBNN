@@ -31,8 +31,8 @@ training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
 
 model_params = {
     'model_type': tbnn.models.kanTBNN,
-    'width': [17,10,10,10,10], #change the width
-    'grid': 10, #can also change the grid for the thickness of the network 
+    'width': [17,9,9,9,10], #change the width
+    'grid': 7, #can also change the grid for the thickness of the network 
      'k': 3,
     'input_features':[
   'komegasst_q6',

@@ -35,7 +35,7 @@ def evaluate_model_with_config(barcode,config):
             config.evaluation(model, config)
 
 if __name__ == "__main__":
-    fullpath = '/home/nikki/kan/kanTBNN/config'
+    fullpath = '/home/nikhila/WDC/kan/kanTBNN/config'
     sys.path.append(fullpath)
     parser = argparse.ArgumentParser()
     parser.add_argument("config_file")

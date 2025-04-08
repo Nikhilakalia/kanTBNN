@@ -1,0 +1,28 @@
+===================================
+======SQUARE DUCT EVALUATION=======
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 110592 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   3.4414E-04
+mse_b:   6.1990E-02
+realzLoss: 2.2449E-06
+%unrealiz: 1.6647%
+mse_a:   1.7836E-09
+======= Validation =======
+aLoss:   2.9445E-01
+mse_b:   7.1407E-02
+realzLoss: 9.7121E-04
+%unrealiz: 24.2622%
+mse_a:   2.9914E-08
+======= Testing =======
+aLoss:   2.4765E-01
+mse_b:   8.3658E-02
+realzLoss: 8.8793E-03
+%unrealiz: 25.8789%
+mse_a:   4.5670E-08
+[dataFoam] Writing nut_L to file /home/nikhila/WDC/kan/configcases/squareDuct_Re_2000_kan_experiment_29_opt/0/nut_L

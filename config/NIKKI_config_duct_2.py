@@ -34,11 +34,11 @@ dataset_params = {'file': '/home/nikhila/WDC/kan/dataset/turbulence_dataset_clea
 #dataset_params['Cases'] = ['case_1p0']
 
 training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
-                    'max_epochs': 500,
+                    'max_epochs': 10,
                     'learning_rate': 0.0005,
                     'learning_rate_decay': 1.0,
                     'batch_size': 64,
-                    'early_stopping_patience': 100,
+                    'early_stopping_patience': 5,
                     'early_stopping_min_delta': 1E-8,
                 }
 model_params = {

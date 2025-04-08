@@ -1,0 +1,32 @@
+import torch.nn as nn
+import tbnn.losses as losses
+import tbnn
+from functools import partial
+import os
+
+run_name = 'duct_experiment_1'
+results_dir = '/home/nikhila/WDC/kan/kanTBNN/models/multi_run/duct_experiment_1'
+if not os.path.exists(results_dir): os.makedirs(results_dir)
+evaluation = tbnn.evaluate.square_duct
+
+dataset_params = {'file': '/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000']}
+training_params = {
+    'loss_fn': partial(losses.aLoss, alpha=100),
+    'max_epochs': 500,
+    'learning_rate': 0.005,
+    'learning_rate_decay': 1.0,
+    'batch_size': 64,
+    'early_stopping_patience': 500,
+    'early_stopping_min_delta': 1e-08,
+}
+
+model_params = {
+    'model_type': tbnn.models.kanTBNN,
+    'width': [16, 11, 11, 5, 10],
+    'grid': 9,
+    'k': 3,
+    'input_features': ['komegasst_q6', 'komegasst_q5', 'komegasst_q8', 'komegasst_I1_16', 'komegasst_I1_7', 'komegasst_I1_3', 'komegasst_I2_6', 'komegasst_q3', 'komegasst_I2_3', 'komegasst_I1_4', 'komegasst_I2_7', 'komegasst_I1_35', 'komegasst_q2', 'komegasst_I1_1', 'komegasst_q4', 'komegasst_I2_8'],
+}
+
+dataset_params['data_loader'] = tbnn.training_utils.get_dataloader_type(training_params['loss_fn'])[0]
+training_params['mseLoss'] = tbnn.training_utils.get_dataloader_type(training_params['loss_fn'])[1]

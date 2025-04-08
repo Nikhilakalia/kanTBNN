@@ -1,0 +1,28 @@
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv', 'Cases': ['squareDuctAve_Re_1100', 'squareDuctAve_Re_1150', 'squareDuctAve_Re_1250', 'squareDuctAve_Re_1300', 'squareDuctAve_Re_1350', 'squareDuctAve_Re_1400', 'squareDuctAve_Re_1500', 'squareDuctAve_Re_1600', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_2000', 'squareDuctAve_Re_2205', 'squareDuctAve_Re_2400', 'squareDuctAve_Re_2600', 'squareDuctAve_Re_2900', 'squareDuctAve_Re_3200', 'squareDuctAve_Re_3500'], 'val_set': ['squareDuctAve_Re_1300', 'squareDuctAve_Re_1800', 'squareDuctAve_Re_3200'], 'test_set': ['squareDuctAve_Re_2000'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 110592 / 27648 / 9216
+Memorization?: False
+Cluster training?: False
+EPOCH     LR        TRAIN         VALID             MSE:T/V                  RL:T/V             %NR_t/%NR_v
+===============================================================================================================
+  1   1.452E-04   1.0851E-02   9.4136E-03   1.0776E-02 / 9.4133E-03   
+ 10   1.452E-04   1.1271E-03   1.0849E-03   1.1249E-03 / 1.0826E-03   
+ 20   1.452E-04   8.0613E-04   7.9724E-04   8.0377E-04 / 7.9323E-04   
+ 30   1.452E-04   6.8452E-04   7.0240E-04   6.8191E-04 / 6.9358E-04   
+ 40   1.452E-04   6.2185E-04   6.0287E-04   6.2139E-04 / 6.0237E-04   
+ 50   1.452E-04   5.5892E-04   6.1720E-04   5.5788E-04 / 6.0709E-04   
+ 60   1.452E-04   5.2859E-04   6.0961E-04   5.2671E-04 / 5.8869E-04   
+ 70   1.452E-04   5.0628E-04   5.8662E-04   5.0448E-04 / 5.6616E-04   
+ 80   1.452E-04   4.9247E-04   5.6144E-04   4.9125E-04 / 5.4825E-04   
+ 90   1.452E-04   4.7667E-04   5.7711E-04   4.7453E-04 / 5.4741E-04   
+100   1.452E-04   4.7252E-04   5.7128E-04   4.7123E-04 / 5.4971E-04   
+110   1.452E-04   4.5987E-04   5.5190E-04   4.5851E-04 / 5.2938E-04   
+120   1.452E-04   4.7527E-04   5.5069E-04   4.7477E-04 / 5.3843E-04   
+130   1.452E-04   4.5557E-04   5.1900E-04   4.5449E-04 / 5.0180E-04   
+140   1.452E-04   4.5749E-04   5.2068E-04   4.5710E-04 / 5.1898E-04   
+150   1.452E-04   4.4330E-04   5.4520E-04   4.4212E-04 / 5.2629E-04   
+160   1.452E-04   4.4165E-04   5.1038E-04   4.4086E-04 / 4.8965E-04   
+170   1.452E-04   4.3831E-04   5.6839E-04   4.3754E-04 / 5.3956E-04   
+180   1.452E-04   4.3016E-04   5.2264E-04   4.2894E-04 / 4.9685E-04   
+190   1.452E-04   4.2880E-04   5.5501E-04   4.2575E-04 / 5.1394E-04   
+200   1.452E-04   4.8532E-04   5.8515E-04   4.8513E-04 / 5.8338E-04   

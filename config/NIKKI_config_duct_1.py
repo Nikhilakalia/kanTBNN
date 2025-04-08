@@ -35,23 +35,23 @@ dataset_params = {'file': '/home/nikhila/WDC/kan/dataset/turbulence_dataset_clea
 
 training_params = { 'loss_fn': partial(losses.aLoss,alpha=100),
                     'max_epochs': 500,
-                    'learning_rate': 0.0005,
+                    'learning_rate': 0.0002,
                     'learning_rate_decay': 1.0,
-                    'batch_size': 64,
-                    'early_stopping_patience': 100,
+                    'batch_size': 32,
+                    'early_stopping_patience': 500,
                     'early_stopping_min_delta': 1E-8,
                 }
 
 model_params = {
     'model_type': tbnn.models.kanTBNN,
-    'width': [14,5,5,5,10], #change the width
-    'grid': 9, #can also change the grid for the thickness of the network 
+    'width': [16,12,13,14,15,10,10,10], #change the width
+    'grid': 5, #can also change the grid for the thickness of the network 
      'k': 3,
     'input_features':[
   'komegasst_q6',
   'komegasst_q5',
-  #'komegasst_q8',
-  #'komegasst_I1_16',
+  'komegasst_q8',
+  'komegasst_I1_16',
   'komegasst_I1_7',
   'komegasst_I1_3',
   'komegasst_I2_6',

@@ -1,0 +1,28 @@
+===================================
+=====PERIODIC HILLS EVALUATION=====
+===================================
+========== Dataset info ==========
+Dataset params: {'file': '/home/nikhila/WDC/kan/dataset/turbulence_dataset_clean.csv', 'Cases': ['case_0p5', 'case_0p8', 'case_1p0', 'case_1p2', 'case_1p5'], 'val_set': ['case_0p8'], 'test_set': ['case_1p2'], 'data_loader': <class 'tbnn.dataloaders.aDataset'>}
+Train/Valid/Test points: 44253 / 14751 / 14751
+Memorization?: False
+Cluster training?: False
+Final model performance:
+======= Training =======
+aLoss:   7.8785E-03
+mse_b:   1.0965E-02
+realzLoss: 3.4443E-09
+%unrealiz: 0.0701%
+mse_a:   1.1646E-12
+======= Validation =======
+aLoss:   8.1084E-03
+mse_b:   1.0723E-02
+realzLoss: 5.0780E-04
+%unrealiz: 0.0203%
+mse_a:   1.3724E-12
+======= Testing =======
+aLoss:   1.0069E-02
+mse_b:   1.0613E-02
+realzLoss: 1.1302E-07
+%unrealiz: 0.0746%
+mse_a:   1.2260E-12
+[dataFoam] Writing nut_L to file /home/nikhila/WDC/kan/configcases/squareDuct_Re_2000_phll_only_1/0/nut_L
